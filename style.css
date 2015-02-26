@@ -1,15 +1,25 @@
 body {
-
-  background-color: #F0FFFF;
+	background-color: #FFFAF0;
+  	margin-right: 100px;
+  	margin-left: 100px;
 }
 h1 {
-	color: #6495ED;
+	color: #4682B4;
 	text-align: center;
-	letter-spacing: 3px;
+	letter-spacing: 5px;
 	font-size: 75px;
+}
+hr {
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #B8860B;
 }
 p {
 	text-align: justify;
-	color: #008B8B;
+	color: #4682B4;
 	font-size: 35px;
+	font-weight: 100;
+}
+p#intro {
+	margin-top: 100px;
 }
