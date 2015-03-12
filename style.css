@@ -24,16 +24,18 @@ hr {
 	border-width: 1px;
 	border-color: #B8860B;
 }
-ul#menubar {
+.menubar {
 	padding: 10px;
 	text-align: right;
 	color: #1E90FF;
 }
-li#menuBar {
+.menuBar {
 	display: inline;
 	padding: 0 10px 0 10px;
 	font-size: 25px;
-
+}
+span {
+	font-weight: bolder;
 }
 p {
 	text-align: left;
@@ -51,11 +53,11 @@ a {
 	color: #1E90FF;
 }
 ul, ol {
-	padding: 10px;
+	margin: 20px;
 	color: #4682B4;
 	list-style-position: inside;
 }
 li {
-	font-size: 35px;
-	padding: 10px;
+	font-size: 25px;
+	padding: 15px;
 }
