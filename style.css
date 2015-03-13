@@ -27,14 +27,15 @@ hr {
 	border-width: 1px;
 	border-color: #B8860B;
 }
-.menubar {
+ul#menubar {
 	margin-top: 0;
 	text-align: right;
 }
 .menuBar {
 	display: inline;
 	padding: 0 10px 0 10px;
-	font-size: 20px;
+	font-variant: small-caps;
+	font-size: 25px;
 }
 a:link, a:visited {
 	text-decoration: none;
