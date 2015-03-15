@@ -1,10 +1,16 @@
+*{
+	margin: 0;
+	padding:0;
+}
+
 header, nav, section {
 	display: block;
 }
 body {
 	background-color: #F0FFFF;
-  	margin-right: 100px;
-  	margin-left: 100px;
+  	margin-right: 6.25em;
+  	margin-left: 6.25em;
+  	font-size: 16px;
   	font-family: 'Quicksand', sans-serif;
   	background-image: url("images/sun.png");
 	background-repeat: no-repeat;
@@ -12,30 +18,30 @@ body {
 }
 h1 {
 	color: #4682B4;
-	text-align: left;
+	font-weight: bolder;
 	letter-spacing: 5px;
-	font-size: 75px;
-	margin-bottom: 0;
+	font-size: 4.70em;
+	line-height: 1.5em;
+	float: left;
+	margin-bottom: -0.3em;
 }
 h2 {
 	color: #4682B4;
-	font-size: 45px;
+	font-size: 1.9em;
+	line-height: 1.5em;
+	text-align: left;
+}
+
+nav {
+	float: right;
+	margin-top: 1em;
 	margin-bottom: 0;
 }
-hr {
-	border-style: dashed;
-	border-width: 1px;
-	border-color: #B8860B;
-}
-ul#menubar {
-	margin-top: 0;
-	text-align: right;
-}
 .menuBar {
-	display: inline;
+	display: inline-block;
 	padding: 0 10px 0 10px;
 	font-variant: small-caps;
-	font-size: 25px;
+	font-size: 1.50em;
 }
 a:link, a:visited {
 	text-decoration: none;
@@ -49,22 +55,30 @@ a:hover, a:active {
 span {
 	font-weight: bolder;
 }
+hr {
+	border-style: dashed;
+	border-width: 1px;
+	border-color: #B8860B;
+	clear: both;
+}
 p#intro {
-	margin-top: 275px;
+	margin-top: 10.5em;
 	text-align: right;
-	font-size: 35px;
+	font-size: 2em;
 	color: #4682B4;
 	font-weight: bold;
 }
 section {
-	margin-top: 75px;
-	margin-left: 10px;
+	margin-top: 4.9em;
+	margin-left: 0.63em;
 }
-ul, ol {
+ul {
 	color: #4682B4;
 	list-style-type: square;
+	margin-top: 2em;
+	margin-left: 3em;
 }
 li {
-	font-size: 26px;
-	padding: 10px;
+	font-size: 1.4em;
+	padding: 0.30em;
 }
