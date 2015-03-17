@@ -6,6 +6,10 @@
 header, nav, section {
 	display: block;
 }
+#dressPage {
+	background-color: #F0FFFF;
+	background-image: none;
+}
 body {
 	background-color: #F0FFFF;
   	margin-right: 6.25em;
@@ -19,7 +23,6 @@ body {
 h1 {
 	color: #4682B4;
 	font-weight: bolder;
-	letter-spacing: 5px;
 	font-size: 4.70em;
 	line-height: 1.5em;
 	float: left;
@@ -42,6 +45,7 @@ nav {
 	padding: 0 10px 0 10px;
 	font-variant: small-caps;
 	font-size: 1.50em;
+	font-weight: bold;
 }
 a:link, a:visited {
 	text-decoration: none;
@@ -62,7 +66,7 @@ hr {
 	clear: both;
 }
 p#intro {
-	margin-top: 10.5em;
+	margin-top: 11.5em;
 	text-align: right;
 	font-size: 2em;
 	color: #4682B4;
@@ -80,5 +84,6 @@ ul {
 }
 li {
 	font-size: 1.4em;
+	font-weight: 500;
 	padding: 0.30em;
 }
