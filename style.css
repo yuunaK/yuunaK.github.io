@@ -1,11 +1,19 @@
 *{
 	margin: 0;
 	padding:0;
+<<<<<<< HEAD
 	box-sizing: border-box;
 }
 body {
 	background-color: #F0FFFF;
   	font-size: 18px;
+=======
+	box-sizing:border-box;
+}
+body {
+	background-color: #F0FFFF;
+  	font-size: 21px;
+>>>>>>> origin/master
   	background-image: url("images/sun.png");
 	background-repeat: no-repeat;
 	background-position: center;
@@ -13,8 +21,11 @@ body {
 	font-family: 'Josefin Slab', serif;
 	font-weight: 400;
 	text-align: left;
+<<<<<<< HEAD
 	/*margin-right: 6.25em;
 	margin-left: 6.25em;*/
+=======
+>>>>>>> origin/master
 }
 body#dressPage {
 	background-image: none;
@@ -26,7 +37,10 @@ h1 {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 3.75em;
 	float: left;
+<<<<<<< HEAD
 	margin-bottom: -0.2em;
+=======
+>>>>>>> origin/master
 }
 nav {
 	float: right;
@@ -58,11 +72,18 @@ hr {
 	border-width: 1px;
 	border-color: #B8860B;
 	clear: both;
+	margin-top: -0.2em;
 }
 h2 {
+<<<<<<< HEAD
 	font-size: 1.75em;
 	margin-top: 4em;
 	margin-bottom: 1em;
+=======
+	font-size: 2em;
+	margin-top: 4em;
+	margin-bottom: 1.5em;
+>>>>>>> origin/master
 }
 main {
 	margin: 5em auto;
@@ -75,15 +96,28 @@ section {
 	margin-left: 3em;
 }
 p {
+<<<<<<< HEAD
 	text-align: left;
 	color: #4682B4;
 	font-family: 'Josefin Slab', serif;
 	font-weight: 400;
 	font-size: 1.2em;
 	line-height: 1.5em;
+=======
+	line-height: 1.8em;
+>>>>>>> origin/master
 	max-width: 25em;
-	margin-bottom: .75em;
+	margin-bottom: 1em;
 }
+p#intro {
+	margin-top: 7em;
+	margin-left: auto;
+	max-width: 20em;
+	text-align: right;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 2.5em;
+}
+<<<<<<< HEAD
 p#intro {
 	margin-top: 7em;
 	margin-left: auto;
@@ -101,3 +135,5 @@ li {
 	padding: .5em;
 }
 
+=======
+>>>>>>> origin/master
