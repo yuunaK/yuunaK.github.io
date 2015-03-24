@@ -1,31 +1,15 @@
 *{
 	margin: 0;
 	padding:0;
-<<<<<<< HEAD
 	box-sizing: border-box;
 }
 body {
-	background-color: #F0FFFF;
-  	font-size: 18px;
-=======
-	box-sizing:border-box;
-}
-body {
-	background-color: #F0FFFF;
-  	font-size: 21px;
->>>>>>> origin/master
-  	background-image: url("images/sun.png");
+	background: #F0FFFF;
+	background-image: url("images/sun.png");
 	background-repeat: no-repeat;
 	background-position: center;
+	font: 400 18px 'Josefin Slab' serif;
 	color: #4682B4;
-	font-family: 'Josefin Slab', serif;
-	font-weight: 400;
-	text-align: left;
-<<<<<<< HEAD
-	/*margin-right: 6.25em;
-	margin-left: 6.25em;*/
-=======
->>>>>>> origin/master
 }
 body#dressPage {
 	background-image: none;
@@ -34,18 +18,13 @@ header, nav, section {
 	display: block;
 }
 h1 {
-	font-family: 'Quicksand', sans-serif;
-	font-size: 3.75em;
+	font: 3.75em 'Quicksand', sans-serif;
 	float: left;
-<<<<<<< HEAD
 	margin-bottom: -0.2em;
-=======
->>>>>>> origin/master
 }
 nav {
 	float: right;
-	margin-top: 2em;
-	margin-bottom: 0;
+	margin: 2em 0 0 0;
 }
 a {
 	display: inline-block;
@@ -64,76 +43,44 @@ a:hover, a:active {
 }
 .active {
 	color: #1E90FF;
-	font-size: 1.5em;
 	font-weight: 400;
 }
 hr {
-	border-style: dashed;
-	border-width: 1px;
-	border-color: #B8860B;
+	border: 1px dashed #B8860B;
 	clear: both;
-	margin-top: -0.2em;
-}
-h2 {
-<<<<<<< HEAD
-	font-size: 1.75em;
-	margin-top: 4em;
-	margin-bottom: 1em;
-=======
-	font-size: 2em;
-	margin-top: 4em;
-	margin-bottom: 1.5em;
->>>>>>> origin/master
 }
 main {
 	margin: 5em auto;
 }
+section {
+	margin: 0 3.5em;
+}
+h2 {
+	font-size: 1.75em;
+	margin: 4em 0 1em;
+}
 img {
 	margin: 1em;
-}
-section {
-	margin-right: 3em;
-	margin-left: 3em;
+	width: 25%;
 }
 p {
-<<<<<<< HEAD
 	text-align: left;
 	color: #4682B4;
-	font-family: 'Josefin Slab', serif;
-	font-weight: 400;
-	font-size: 1.2em;
-	line-height: 1.5em;
-=======
-	line-height: 1.8em;
->>>>>>> origin/master
+	font: 400 1.2em/1.5em 'Josefin Slab', serif;
 	max-width: 25em;
 	margin-bottom: 1em;
 }
 p#intro {
-	margin-top: 7em;
-	margin-left: auto;
+	margin: 7em auto 0 auto;
 	max-width: 20em;
+	font: 2.5em 'Quicksand' sans-serif;
 	text-align: right;
-	font-family: 'Quicksand', sans-serif;
-	font-size: 2.5em;
-}
-<<<<<<< HEAD
-p#intro {
-	margin-top: 7em;
-	margin-left: auto;
-	max-width: 20em;
-	font-family: 'Quicksand', sans-serif;
-	font-size: 2.5em;
 }
 ul {
-	list-style-type: square;
-	list-style-position: inside;
+	list-style: square inside;
 	font-size: 1.2em;
 	max-width: 25em;
 }
 li {
 	padding: .5em;
 }
-
-=======
->>>>>>> origin/master
