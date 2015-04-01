@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	max-width: 75em;
+	font-size: 18px;
+	font-family: 'Junge', serif;
+	font-weight: 400;
+	background-image: url("tjbg.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+h1, h2, h3, nav {
+	display: block;
+}
+h1 {
+	float: left;
+	font-size: 5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+}
+h2 {
+	float: left;
+	font-size: 2em;
+	padding: 1.5em 0 0 .2em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+nav {
+	float: right;
+}
+a {
+	display: inline-block;
+	padding: 2.7em .5em 0 .5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #000;
+	text-decoration: none;
+}
+a:link {
+	color: #000;
+}
+a:visited {
+	color: #000;
+}
+a:hover, a:active {
+	font-weight: bolder;
+}
+h3 {
+	padding: 7em 0 0 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+p {
+	max-width: 28em;
+	text-align: justify;
+	padding: 1.5em;
+	font-family: 'Junge', serif;
+	font-weight: 400;
+}
+ul {
+	list-style-type: square;
+	list-style-position: inside;
+	padding-left: 1.5em;
+	padding-top: 1.5em;
+	font-family: 'Junge', serif;
+	font-weight: 400;
+}
+footer {
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 0;
+	padding-left: 1.5em;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	font-size: 0;
+	height: 0;
+	clear: both;
+}

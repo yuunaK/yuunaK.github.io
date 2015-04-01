@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	max-width: 75em;
+	font-size: 18px;
+	font-family: 'Junge', serif;
+	font-weight: 400;
+}
+h1 {
+	float: left;
+	font-size: 5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 700;
+}
+h2 {
+	float: left;
+	font-size: 2em;
+	padding: 1.5em 0 0 .2em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+nav {
+	float: right;
+	display: block;
+}
+a {
+	display: inline-block;
+	padding: 3em 2em 0 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 1.2em;
+	color: #000;
+	text-decoration: none;
+}
+a.footext {
+	padding: 2em 2em 0 0;
+}
+a:link {
+	color: #000;
+}
+a:visited {
+	color: #000;
+}
+a:hover, a:active {
+	font-weight: bolder;
+}
+div {
+	min-height: 100vh;
+}
+h3 {
+	padding: 7em 0 0 1.5em;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+h3#ser {
+	padding-left: 1.5em;
+	color: #fff;
+}
+h3#work {
+	padding: 1em 0 0 .5em;
+	font-size: 3em;
+}
+p {
+	max-width: 25em;
+	padding-top: 1.5em;
+	padding-left: 1.5em;
+	font-family: 'Junge', serif;
+	font-weight: 400;
+	line-height: 1.5em;
+}
+ul {
+	list-style-type: none;
+	list-style-position: inside;
+	font-family: 'Source Sans Pro', san-serif;
+	font-weight: 400;
+	color: #fff;
+	padding-bottom: 9em;
+	padding-left: 1.5em;
+}
+li {
+	padding-top: 1em;
+}
+section#about {
+	float: left;
+	width: 75%;
+}
+section#services {
+	float: right;
+	width: 25%;
+	margin-top: 3em;
+	background-color: #000;
+}
+.work {
+	width: 33%;
+	float: left;
+}
+footer {
+	clear: both;
+	margin-left: 1.5em;
+	margin-bottom: 0;
+}
+footer#copyinfo {
+	text-align: center;
+	margin-top: 5em;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	font-size: 0;
+	height: 0;
+	clear: both;
+}

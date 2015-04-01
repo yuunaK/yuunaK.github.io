@@ -4,12 +4,14 @@
 	box-sizing: border-box;
 }
 body {
-	background: #F0FFFF;
+	background-color: #F0FFFF;
 	background-image: url("images/sun.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	font: 400 18px 'Josefin Slab' serif;
 	color: #4682B4;
+	min-height: 100vh;
+	position: relative;
 }
 body#dressPage {
 	background-image: none;
@@ -28,7 +30,7 @@ nav {
 }
 a {
 	display: inline-block;
-	padding: 0 15px 0 15px;
+	padding: 0 1em 0 1em;
 	font-weight: 100;
 	font-size: 1.5em;
 }
@@ -54,10 +56,13 @@ main {
 }
 section {
 	margin: 0 3.5em;
+	position: absolute;
+	top: 25%;
+	transform: translateY(-25%);
 }
 h2 {
 	font-size: 1.75em;
-	margin: 4em 0 1em;
+	padding-bottom: 1.25em;
 }
 img {
 	margin: 1em;
