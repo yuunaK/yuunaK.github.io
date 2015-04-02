@@ -4,60 +4,87 @@
 	box-sizing: border-box;
 }
 body {
+	color:#222;
 	max-width: 75em;
+	margin:auto;
 	font-size: 18px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
+}
+nav {
+	float: right;
+}
+section { }
+section > footer {
+	clear: both;
+	margin-left: 1.5em;
+	margin-bottom: 0;
+}
+section#about {
+	float: left;
+	width: 66.66%;
+}
+section#about footer > a {
+	padding: 2em 2em 0 0;
+	font-size: 1.2em;
+}
+section#services {
+	float: left;
+	width: 33.33%;
+	margin-top: 3em;
+	background-color: rgba(0,220,245,1);
+}
+section#services > h2 {
+	padding-left: 1.4em;
+}
+section#work > h2 {
+	padding: 1em 0 1em .5em;
+	font-size: 3em;
+}
+section#work .projects:nth-child(odd) {
+	background-color: rgba(0,220,245,.2);
+}
+section#work .projects:nth-child(even) {
+	background-color: rgba(0,220,245,.5);
+}
+section#work .projects {
+	width: 33%;
+	float: left;
+	padding:.5em;
+}
+div > footer {
+}
+div footer > a {
+	font-size: 1em;
 }
 h1 {
 	float: left;
 	font-size: 5em;
 	font-weight: 700;
 }
+h1 span {
+	font-size:.5em;
+	font-weight:400;
+}
 h2 {
-	float: left;
 	font-size: 2em;
 	padding: 1.5em 0 0 .2em;
 }
-nav {
-	float: right;
+h3 {
+	padding: 7em 0 0 1.5em;
 }
 a {
 	display: inline-block;
 	padding: 3em 2em 0 0;
 	font-size: 1.2em;
-	color: #000;
+	color: #222;
 	text-decoration: none;
 }
-section#about footer > a {
-	padding: 2em 2em 0 0;
-	font-size: 1.2em;
-}
-div footer > a {
-	font-size: 1em;
-}
-a:link {
-	color: #000;
-}
-a:visited {
-	color: #000;
+a:link, a:visited {
+	color: #222;
 }
 a:hover, a:active {
 	color: rgba(0,220,245,.8);
-}
-div {
-	min-height: 100vh;
-}
-h3 {
-	padding: 7em 0 0 1.5em;
-}
-section#services > h3 {
-	padding-left: 1.4em;
-	color: #000;
-}
-section#work > h3 {
-	padding: 1em 0 1em .5em;
-	font-size: 3em;
 }
 p {
 	max-width: 25em;
@@ -67,45 +94,14 @@ p {
 	font-weight: 400;
 	line-height: 1.5em;
 }
-section#work p:nth-child(odd) {
-	background-color: rgba(0,220,245,.2);
-}
-section#work p:nth-child(even) {
-	background-color: rgba(0,220,245,.5);
-}
 ul {
 	list-style-type: none;
 	list-style-position: inside;
-	color: #000;
 	padding-bottom: 9em;
 	padding-left: 1.5em;
 }
 li {
 	padding-top: 1em;
-}
-section#about {
-	float: left;
-	width: 75%;
-}
-section#services {
-	float: right;
-	width: 25%;
-	margin-top: 3em;
-	background-color: rgba(0,220,245,1);
-}
-section#work > p {
-	width: 33%;
-	float: left;
-}
-section > footer {
-	clear: both;
-	margin-left: 1.5em;
-	margin-bottom: 0;
-}
-div > footer {
-    left: 40%;
-	position: absolute;
-	bottom: -115%;
 }
 .clearfix:after {
 	visibility: hidden;
