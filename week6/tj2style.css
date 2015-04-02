@@ -6,36 +6,30 @@
 body {
 	max-width: 75em;
 	font-size: 18px;
-	font-family: 'Junge', serif;
+	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
 }
 h1 {
 	float: left;
 	font-size: 5em;
-	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 700;
 }
 h2 {
 	float: left;
 	font-size: 2em;
 	padding: 1.5em 0 0 .2em;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
 }
 nav {
 	float: right;
-	display: block;
 }
 a {
 	display: inline-block;
 	padding: 3em 2em 0 0;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
 	font-size: 1.2em;
 	color: #000;
 	text-decoration: none;
 }
-a.footext {
+footer a {
 	padding: 2em 2em 0 0;
 }
 a:link {
@@ -45,21 +39,19 @@ a:visited {
 	color: #000;
 }
 a:hover, a:active {
-	font-weight: bolder;
+	color: rgba(0,220,245,.8);
 }
 div {
 	min-height: 100vh;
 }
 h3 {
 	padding: 7em 0 0 1.5em;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
 }
-h3#ser {
-	padding-left: 1.5em;
-	color: #fff;
+section#services > h3 {
+	padding-left: 1.4em;
+	color: #000;
 }
-h3#work {
+section#work > h3 {
 	padding: 1em 0 0 .5em;
 	font-size: 3em;
 }
@@ -71,12 +63,16 @@ p {
 	font-weight: 400;
 	line-height: 1.5em;
 }
+section#work p:nth-child(odd) {
+	background-color: rgba(0,220,245,.2);
+}
+section#work p:nth-child(even) {
+	background-color: rgba(0,220,245,.5);
+}
 ul {
 	list-style-type: none;
 	list-style-position: inside;
-	font-family: 'Source Sans Pro', san-serif;
-	font-weight: 400;
-	color: #fff;
+	color: #000;
 	padding-bottom: 9em;
 	padding-left: 1.5em;
 }
@@ -91,9 +87,9 @@ section#services {
 	float: right;
 	width: 25%;
 	margin-top: 3em;
-	background-color: #000;
+	background-color: rgba(0,220,245,1);
 }
-.work {
+section#work > p {
 	width: 33%;
 	float: left;
 }
@@ -102,7 +98,7 @@ footer {
 	margin-left: 1.5em;
 	margin-bottom: 0;
 }
-footer#copyinfo {
+div > footer {
 	text-align: center;
 	margin-top: 5em;
 }
