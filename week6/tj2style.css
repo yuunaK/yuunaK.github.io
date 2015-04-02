@@ -32,6 +32,9 @@ a {
 footer a {
 	padding: 2em 2em 0 0;
 }
+div footer > a {
+	font-size: 1em;
+}
 a:link {
 	color: #000;
 }
@@ -52,7 +55,7 @@ section#services > h3 {
 	color: #000;
 }
 section#work > h3 {
-	padding: 1em 0 0 .5em;
+	padding: 1em 0 1em .5em;
 	font-size: 3em;
 }
 p {
@@ -93,14 +96,15 @@ section#work > p {
 	width: 33%;
 	float: left;
 }
-footer {
+section > footer {
 	clear: both;
 	margin-left: 1.5em;
 	margin-bottom: 0;
 }
 div > footer {
-	text-align: center;
-	margin-top: 5em;
+    left: 40%;
+	position: absolute;
+	bottom: -115%;
 }
 .clearfix:after {
 	visibility: hidden;
