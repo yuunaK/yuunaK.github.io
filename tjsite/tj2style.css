@@ -11,35 +11,62 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;
 }
+div {
+	min-height: 80vh;
+}
 nav {
 	float: right;
+	padding: 1.5em;
 }
-section { }
-section > footer {
-	clear: both;
-	margin-left: 1.5em;
-	margin-bottom: 0;
+a {
+	display: inline-block;
+	font-size: 1.2em;
+	color: #222;
+	text-decoration: none;
+	padding-right: 1em;
+}
+a:link, a:visited {
+	color: #222;
+}
+a:hover, a:active {
+	color: rgba(0,220,245,.8);
+}
+section { 
+	margin-top: 3em;
 }
 section#about {
 	float: left;
 	width: 66.66%;
 }
+section#about > p {
+	max-width: 50%;
+	padding-left: 0;
+}
 section#about footer > a {
-	padding: 2em 2em 0 0;
 	font-size: 1.2em;
+	margin-top: 1.5em;
+	margin-bottom: 0;
 }
 section#services {
-	float: left;
+	float: right;
 	width: 33.33%;
-	margin-top: 3em;
 	background-color: rgba(0,220,245,1);
+	height: 50%;
+
 }
 section#services > h2 {
-	padding-left: 1.4em;
+	padding-left: .5em;
+}
+ul {
+	list-style-type: none;
+	list-style-position: inside;
+	padding-bottom: 12em;
+	padding-left: 1em;
+}
+li {
+	padding-bottom: .5em;
 }
 section#work > h2 {
-	padding: 1em 0 1em .5em;
-	font-size: 3em;
 }
 section#work .projects:nth-child(odd) {
 	background-color: rgba(0,220,245,.2);
@@ -50,16 +77,21 @@ section#work .projects:nth-child(even) {
 section#work .projects {
 	width: 33%;
 	float: left;
-	padding:.5em;
 }
-div > footer {
+div  > footer {
+	clear: both;
 }
-div footer > a {
+footer > p {
+	padding-top: 15em;
+	position: relative;
+	left: 40%;
+}
+footer p > a {
 	font-size: 1em;
 }
 h1 {
 	float: left;
-	font-size: 5em;
+	font-size: 3em;
 	font-weight: 700;
 }
 h1 span {
@@ -67,41 +99,20 @@ h1 span {
 	font-weight:400;
 }
 h2 {
-	font-size: 2em;
-	padding: 1.5em 0 0 .2em;
+	font-size: 1.5em;
+	padding-bottom: .5em;
+	padding-left: 0;
 }
 h3 {
-	padding: 7em 0 0 1.5em;
-}
-a {
-	display: inline-block;
-	padding: 3em 2em 0 0;
-	font-size: 1.2em;
-	color: #222;
-	text-decoration: none;
-}
-a:link, a:visited {
-	color: #222;
-}
-a:hover, a:active {
-	color: rgba(0,220,245,.8);
+	height: 2em;
+	padding-left: 1.2em;
 }
 p {
 	max-width: 25em;
-	padding-top: 1.5em;
-	padding-left: 1.5em;
 	font-family: 'Junge', serif;
 	font-weight: 400;
 	line-height: 1.5em;
-}
-ul {
-	list-style-type: none;
-	list-style-position: inside;
-	padding-bottom: 9em;
-	padding-left: 1.5em;
-}
-li {
-	padding-top: 1em;
+	padding: 1.5em;
 }
 .clearfix:after {
 	visibility: hidden;
