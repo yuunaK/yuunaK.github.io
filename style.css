@@ -11,7 +11,6 @@ body {
 	font: 400 18px 'Josefin Slab' serif;
 	color: #4682B4;
 	min-height: 100vh;
-	position: relative;
 }
 body#dressPage {
 	background-image: none;
@@ -20,25 +19,29 @@ header, nav, section {
 	display: block;
 }
 h1 {
-	font: 3.75em 'Quicksand', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3.75em;
+	line-height: 1em;
 	float: left;
 	margin-bottom: -0.2em;
 }
 nav {
 	float: right;
-	margin: 2em 0 0 0;
-}
-a {
-	display: inline-block;
-	padding: 0 1em 0 1em;
-	font-weight: 100;
+	margin: 1em 0 0 0;
 	font-size: 1.5em;
+	font-weight: 100;
 }
-a:link, a:visited {
+nav ul > li {
+	display: inline;
+}
+ul li > a {
+	/*display: inline-block;*/
+}
+ul li > a:link, a:visited {
 	text-decoration: none;
 	color: #1E90FF;
 }
-a:hover, a:active {
+ul li > a:hover, a:active {
 	text-decoration: none;
 	color: #1E90FF;
 	font-weight: bolder;
@@ -52,13 +55,14 @@ hr {
 	clear: both;
 }
 main {
-	margin: 5em auto;
+	margin: 2.5em auto;
 }
 section {
-	margin: 0 3.5em;
-	position: absolute;
-	top: 25%;
-	transform: translateY(-25%);
+	margin: 5em 3.5em;
+}
+aside {
+	margin: 10em 5em 0 0;
+	float: right;
 }
 h2 {
 	font-size: 1.75em;
@@ -68,6 +72,14 @@ img {
 	margin: 1em;
 	width: 299px;
 	height: 428px;
+}
+img:hover {
+	cursor: pointer;
+}
+.dresspage > img {
+	margin: 2em 0 0 2em;
+	width: 484px;
+	height: 648px;
 }
 p {
 	text-align: left;
@@ -89,4 +101,30 @@ ul {
 }
 li {
 	padding: .5em;
+}
+aside > ul > li {
+	max-width: 20em;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+footer {
+	background-color: #fff;
+}
+footer > p {
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	position: relative;
+	left: 48%;
+}
+body#splash footer {
+	margin-top: 10em;
+}
+.clearfix:after {
+	visibility: hidden;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	clear: both;
 }
