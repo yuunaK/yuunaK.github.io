@@ -10,6 +10,7 @@ body {
 	background-position: center;
 	font: 400 18px 'Josefin Slab' serif;
 	color: #4682B4;
+	min-width: 95vh;
 	min-height: 100vh;
 }
 body#dressPage {
@@ -58,7 +59,7 @@ main {
 	margin: 2.5em auto;
 }
 section {
-	margin: 5em 3.5em;
+	margin: 5em 0 3em 2em;
 }
 aside {
 	margin: 10em 5em 0 0;
@@ -80,6 +81,7 @@ img:hover {
 	margin: 2em 0 0 2em;
 	width: 484px;
 	height: 648px;
+	cursor: inherit;
 }
 p {
 	text-align: left;
@@ -89,7 +91,8 @@ p {
 	margin-bottom: 1em;
 }
 p#intro {
-	margin: 7em auto 0 auto;
+	/*margin: 35% 0 auto auto;*/
+	margin: 10em 0 auto auto;
 	max-width: 20em;
 	font: 2.5em 'Quicksand' sans-serif;
 	text-align: right;
@@ -109,6 +112,7 @@ aside > ul > li {
 }
 footer {
 	background-color: #fff;
+	
 }
 footer > p {
 	display: block;
@@ -117,9 +121,6 @@ footer > p {
 	position: relative;
 	left: 48%;
 }
-body#splash footer {
-	margin-top: 10em;
-}
 .clearfix:after {
 	visibility: hidden;
 	content: " ";
@@ -127,4 +128,31 @@ body#splash footer {
 	font-size: 0;
 	height: 0;
 	clear: both;
+}
+@media only screen and (max-width: 61em) {
+	.dresspage > img {
+		width: 299px;
+		height: 428px;
+	}
+	section {
+		margin: 5em 0em 0;
+	}
+	aside {
+		float: none;
+		margin: 2em;
+		font-size: .8em;
+		line-height: .8em;
+	}
+	p {
+		font-size: 1.2em;
+		line-height: 1.2em;
+		max-width: 100%;
+	}
+	p#intro {
+		font-size: 1.5em;
+		text-align: left;
+		position: relative;
+		left: -5%;
+		/*margin: 12em auto 0 auto;*/
+	}
 }
