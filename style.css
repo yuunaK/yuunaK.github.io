@@ -10,7 +10,6 @@ body {
 	background-position: center;
 	font: 400 18px 'Josefin Slab' serif;
 	color: #4682B4;
-	min-width: 95vh;
 	min-height: 100vh;
 }
 body#dressPage {
@@ -65,16 +64,19 @@ aside {
 	margin: 10em 5em 0 0;
 	float: right;
 }
+/*.dresspage > div {
+	width: 50%;
+}*/
 h2 {
 	font-size: 1.75em;
 	padding-bottom: 1.25em;
 }
-img {
+main img {
 	margin: 1em;
 	width: 299px;
 	height: 428px;
 }
-img:hover {
+main img:hover {
 	cursor: pointer;
 }
 .dresspage > img {
@@ -92,18 +94,21 @@ p {
 }
 p#intro {
 	/*margin: 35% 0 auto auto;*/
-	margin: 10em 0 auto auto;
+	margin: 10em 1em 1em auto;
 	max-width: 20em;
 	font: 2.5em 'Quicksand' sans-serif;
 	text-align: right;
 }
 ul {
 	list-style: square inside;
-	font-size: 1.2em;
-	max-width: 25em;
+	/*font-size: 1.2em;*/
+	/*max-width: 25em;*/
 }
 li {
 	padding: .5em;
+	max-width: 25em;
+	font-size: 1.2em;
+	line-height: 1em;
 }
 aside > ul > li {
 	max-width: 20em;
@@ -112,12 +117,10 @@ aside > ul > li {
 }
 footer {
 	background-color: #fff;
-	
 }
 footer > p {
 	display: block;
 	font-size: 16px;
-	font-weight: 400;
 	position: relative;
 	left: 48%;
 }
@@ -129,30 +132,90 @@ footer > p {
 	height: 0;
 	clear: both;
 }
-@media only screen and (max-width: 61em) {
-	.dresspage > img {
-		width: 299px;
-		height: 428px;
-	}
-	section {
-		margin: 5em 0em 0;
-	}
-	aside {
-		float: none;
-		margin: 2em;
-		font-size: .8em;
-		line-height: .8em;
-	}
-	p {
-		font-size: 1.2em;
-		line-height: 1.2em;
-		max-width: 100%;
-	}
+/* sizing the index page */
+@media only screen and (min-width: 945px) and (max-width: 1075px) {
 	p#intro {
-		font-size: 1.5em;
-		text-align: left;
-		position: relative;
-		left: -5%;
-		/*margin: 12em auto 0 auto;*/
+		transition: visibility .25s linear;
+		margin: 10em 1em 1em auto;
+	}
+	body#splash footer {
+		margin-top: -1em;
+	}
+}
+@media only screen and (min-width: 934px) and (max-width: 944) {
+	p#intro {
+		margin: 10em -10em 1em auto;
+	}
+}
+@media only screen and (max-width: 720px) {
+	p#intro {
+	margin: 18em 1em 1em 1em;
+	font-size: 1.25em;
+	max-width: 100%;
+	text-align: left;
+	}
+}
+/* sizing the policies page */
+@media only screen and (min-width: 500px) and (max-width: 960px) {
+	section {
+		margin: 5em 2em 3em 2em;
+	}
+	section > p {
+		max-width: 25em;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+	section {
+		margin: 5em 1em 3em 1em;
+	}
+	section > p {
+		font-size: 1em;
+		line-height: 1em;
+	}
+}
+/* sizing the aboutStitchery page */
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+	section ul > li {
+		font-size: 1em;
+		line-height: 1em;
+	}
+}
+/* sizing the individual dress details page */
+@media only screen and (min-width: 885px) and (max-width: 971px) {
+	.dresspage > img {
+		transition: visibility .25s linear;
+		width: 384px;
+		height: 548px;
+		margin-bottom: 2em;
+	}
+}
+@media only screen and (min-width: 870px) and (max-width: 884px) {
+	.dresspage > img {
+		width: 384px;
+		height: 548px;
+		margin-bottom: 2em;
+	}
+	aside ul > li {
+		font-size: .8em;
+		line-height: 1.2em;
+	}
+@media only screen and (min-width: 548px) and (max-width: 869px) {
+	.dresspage > img {
+		width: 284px;
+		height: 448px;
+		margin-top: 2em;
+	}
+	aside ul > li {
+		font-size: .8em;
+		line-height: 1.2em;
+	}
+	footer {
+		margin-top: 2em;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 547px) {
+	.dresspage > img {
+		width: 284px;
+		height: 448px;
 	}
 }
