@@ -31,11 +31,25 @@ nav {
 	font-size: 1.5em;
 	font-weight: 100;
 }
+/* code snippet part 1 from codepen 
+http://codepen.io/daramao/pen/XJLOda?editors=110  
+to make nav bar disapper and substitute a toggle menu */
+nav > ul {
+	position: relative;
+	display: block;
+}
+.menu {
+	display: none;
+}
+ul > input {
+	opacity: 0;
+}
+/* end of code snippet part 1 */
 nav ul > li {
 	display: inline;
 }
 ul li > a {
-	/*display: inline-block;*/
+	display: inline-block;
 }
 ul li > a:link, a:visited {
 	text-decoration: none;
@@ -64,9 +78,6 @@ aside {
 	margin: 10em 5em 0 0;
 	float: right;
 }
-/*.dresspage > div {
-	width: 50%;
-}*/
 h2 {
 	font-size: 1.75em;
 	padding-bottom: 1.25em;
@@ -131,6 +142,37 @@ footer > p {
 	font-size: 0;
 	height: 0;
 	clear: both;
+}
+/* sizing the nav bar */
+@media only screen and (min-width: 450px) and (max-width: 955px) {
+	nav {
+		font-size: 1em;
+	}
+}
+@media only screen and (max-width: 449px) {
+	.menu {
+		display: inherit;
+		position: relative;
+		text-align: center;
+	}
+	ul input {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%%;
+		z-index: 2;
+		cursor: pointer;
+	}
+	nav ul > li {
+		display: none;
+	}
+	ul input:checked ~ li {
+		position: relative;
+		display: inline-block;
+		z-index: 3;
+	}
 }
 /* sizing the index page */
 @media only screen and (min-width: 945px) and (max-width: 1075px) {
