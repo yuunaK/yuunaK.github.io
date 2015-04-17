@@ -31,7 +31,7 @@ nav {
 	font-size: 1.5em;
 	font-weight: 100;
 }
-/* code snippet part 1 from codepen 
+/* code snippet part 1 adapted from codepen 
 http://codepen.io/daramao/pen/XJLOda?editors=110  
 to make nav bar disapper and substitute a toggle menu */
 nav > ul {
@@ -41,7 +41,7 @@ nav > ul {
 .menu {
 	display: none;
 }
-ul > input {
+input {
 	opacity: 0;
 }
 /* end of code snippet part 1 */
@@ -74,7 +74,7 @@ main {
 section {
 	margin: 5em 0 3em 2em;
 }
-aside {
+.dresspage > div {
 	margin: 10em 5em 0 0;
 	float: right;
 }
@@ -121,7 +121,7 @@ li {
 	font-size: 1.2em;
 	line-height: 1em;
 }
-aside > ul > li {
+div > ul > li {
 	max-width: 20em;
 	font-size: 1em;
 	line-height: 1.5em;
@@ -161,7 +161,7 @@ footer > p {
 		top: 0;
 		right: 0;
 		width: 100%;
-		height: 100%%;
+		height: 100%;
 		z-index: 2;
 		cursor: pointer;
 	}
@@ -174,6 +174,7 @@ footer > p {
 		z-index: 3;
 	}
 }
+
 /* sizing the index page */
 @media only screen and (min-width: 945px) and (max-width: 1075px) {
 	p#intro {
@@ -238,7 +239,7 @@ footer > p {
 		margin-top: 2em;
 		margin-bottom: 2em;
 	}
-	aside ul > li {
+	div ul > li {
 		font-size: .8em;
 		line-height: 1.2em;
 	}
@@ -250,10 +251,13 @@ footer > p {
 	.dresspage > img {
 		margin-left: 3em;
 	}
-	aside {
-		float: none;
+	.dresspage > div {
+		float: left;
 		margin-left: 3em;
 		margin-top: 1.5em;
+	}
+	footer {
+		clear: both;
 	}
 }
 @media only screen and (max-width: 500px) {
@@ -261,9 +265,12 @@ footer > p {
 		width: 284px;
 		height: 448px;
 	}
-	aside {
-		float: none;
+	.dresspage > div {
+		float: left;
 		margin-left: 1.5em;
 		margin-top: 1.5em;
+	}
+	footer {
+		clear: both;
 	}
 }
