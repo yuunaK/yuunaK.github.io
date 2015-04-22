@@ -1,0 +1,300 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #F0FFFF;
+	background-image: url("images/sun.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	font: 400 18px 'Josefin Slab' serif;
+	color: #4682B4;
+	min-height: 100vh;
+}
+body#dressPage {
+	background-image: none;
+}
+header, nav, section {
+	display: block;
+}
+h1 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3.75em;
+	line-height: 1em;
+	float: left;
+	margin-bottom: -0.2em;
+}
+nav {
+	float: right;
+	margin: 1em 0 0 0;
+	font-size: 1.5em;
+	font-weight: 100;
+}
+/* code snippet part 1 adapted from codepen 
+http://codepen.io/lavoiesl/pen/KthjD 
+to make nav bar disapper and substitute a toggle menu */
+header {
+	position: relative;
+}
+input {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+}
+nav ul > li {
+	transition: visibility  .25s linear;
+}
+label {
+	display: none;
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+	z-index: 1;
+}
+/* end of code snippet part 1 */
+nav ul > li {
+	display: inline;
+}
+ul li > a {
+	display: inline-block;
+}
+ul li > a:link, a:visited {
+	text-decoration: none;
+	color: #1E90FF;
+}
+ul li > a:hover, a:active {
+	text-decoration: none;
+	color: #1E90FF;
+	font-weight: bolder;
+}
+.active {
+	color: #1E90FF;
+	font-weight: 400;
+}
+hr {
+	border: 1px dashed #B8860B;
+	clear: both;
+}
+main {
+	margin: 2.5em auto;
+}
+section {
+	margin: 5em 0 3em 2em;
+}
+.dresspage > div {
+	margin: 10em 5em 0 0;
+	float: right;
+}
+h2 {
+	font-size: 1.75em;
+	padding-bottom: 1.25em;
+}
+main img {
+	margin: 1em;
+	width: 299px;
+	height: 428px;
+}
+main img:hover {
+	cursor: pointer;
+}
+.dresspage > img {
+	margin: 2em 0 0 2em;
+	width: 484px;
+	height: 648px;
+	cursor: inherit;
+}
+p {
+	text-align: left;
+	color: #4682B4;
+	font: 400 1.2em/1.5em 'Josefin Slab', serif;
+	max-width: 25em;
+	margin-bottom: 1em;
+}
+p#intro {
+	/*margin: 35% 0 auto auto;*/
+	margin: 10em 1em 1em auto;
+	max-width: 20em;
+	font: 2.5em 'Quicksand' sans-serif;
+	text-align: right;
+}
+ul {
+	list-style: square inside;
+	/*font-size: 1.2em;*/
+	/*max-width: 25em;*/
+}
+li {
+	padding: .5em;
+	max-width: 25em;
+	font-size: 1.2em;
+	line-height: 1em;
+}
+div > ul > li {
+	max-width: 20em;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+footer {
+	background-color: #fff;
+}
+footer > p {
+	display: block;
+	font-size: 16px;
+	position: relative;
+	left: 48%;
+}
+.clearfix:after {
+	visibility: hidden;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	clear: both;
+}
+/* sizing the nav bar */
+@media only screen and (min-width: 450px) and (max-width: 955px) {
+	nav {
+		font-size: 1em;
+	}
+}
+@media only screen and (max-width: 449px) {
+	nav > ul {
+			max-height: 0;
+			overflow: hidden;
+	}
+	nav ul > li {
+			display: none;
+	}
+	label {
+			display: block;
+			cursor: pointer;
+	}
+	input {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		cursor: pointer;
+	}
+	input:checked + nav > label {
+		opacity: 0.5;
+	}
+	input:checked + nav > ul {
+		max-height: 300px;
+	}
+	input:checked + nav ul > li {
+			visibility: visible;
+			display: inline-block;
+			position: relative;
+			z-index: 3;
+		}
+}
+
+/* sizing the index page */
+@media only screen and (min-width: 945px) and (max-width: 1075px) {
+	p#intro {
+		transition: visibility .25s linear;
+		margin: 10em 1em 1em auto;
+	}
+	body#splash footer {
+		margin-top: -1em;
+	}
+}
+@media only screen and (min-width: 934px) and (max-width: 944) {
+	p#intro {
+		margin: 10em -10em 1em auto;
+	}
+}
+@media only screen and (max-width: 720px) {
+	p#intro {
+	margin: 18em 1em 1em 1em;
+	font-size: 1.25em;
+	max-width: 100%;
+	text-align: left;
+	}
+}
+/* sizing the policies page */
+@media only screen and (min-width: 500px) and (max-width: 960px) {
+	section {
+		margin: 5em 2em 3em 2em;
+	}
+	section > p {
+		max-width: 25em;
+	}
+}
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+	section {
+		margin: 5em 1em 3em 1em;
+	}
+	section > p {
+		font-size: 1em;
+		line-height: 1em;
+	}
+}
+/* sizing the aboutStitchery page */
+@media only screen and (min-width: 320px) and (max-width: 500px) {
+	section ul > li {
+		font-size: 1em;
+		line-height: 1em;
+	}
+}
+/* sizing the individual dress details page */
+@media only screen and (min-width: 885px) and (max-width: 971px) {
+	.dresspage > img {
+		transition: visibility .25s linear;
+		width: 384px;
+		height: 548px;
+		margin-bottom: 2em;
+	}
+}
+@media only screen and (min-width: 722px) and (max-width: 884px) {
+	.dresspage > img {
+		width: 284px;
+		height: 448px;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+	div ul > li {
+		font-size: .8em;
+		line-height: 1.2em;
+	}
+	footer {
+		margin-top: 2em;
+	}
+}
+@media only screen and (min-width: 501px) and (max-width: 721px) {
+	.dresspage > img {
+		margin-left: 3em;
+	}
+	.dresspage > div {
+		float: left;
+		margin-left: 3em;
+		margin-top: 1.5em;
+	}
+	footer {
+		clear: both;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.dresspage > img {
+		width: 284px;
+		height: 448px;
+	}
+	.dresspage > div {
+		float: left;
+		margin-left: 1.5em;
+		margin-top: 1.5em;
+	}
+	footer {
+		clear: both;
+	}
+}
