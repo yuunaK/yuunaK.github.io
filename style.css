@@ -51,9 +51,18 @@ nav ul > li {
 ul li > a {
 	display: inline-block;
 }
+p#intro > a:link, a:visited {
+	text-decoration: none;
+	color: #1E90FF;
+} 
 ul li > a:link, a:visited {
 	text-decoration: none;
 	color: #1E90FF;
+}
+p#intro > a:link, a:visited {
+	text-decoration: none;
+	color: #1E90FF;
+	font-weight: bolder;
 }
 ul li > a:hover, a:active {
 	text-decoration: none;
