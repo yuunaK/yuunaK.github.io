@@ -36,6 +36,7 @@ nav ul > li {
 }
 ul li > a {
 	display: inline-block;
+	padding: 0 .5em;
 }
 ul li > a:link, a:visited {
 	text-decoration: none;
@@ -58,6 +59,12 @@ p#intro > a:hover, a:active {
 	text-decoration: none;
 	color: #1E90FF;
 	font-weight: bolder;
+}
+div a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 2em 1.5em;
+	margin-top: 1em;
 }
 /* code snippet part 1 adapted from codepen 
 http://codepen.io/lavoiesl/pen/KthjD 
@@ -129,10 +136,13 @@ li {
 	font-size: 1.2em;
 	line-height: 1em;
 }
+div > ul {
+	margin-top: .5em;
+}
 div > ul > li {
 	max-width: 20em;
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 1.2em;
 }
 footer {
 	background-color: #fff;
@@ -204,8 +214,9 @@ footer > p {
 	}
 	input:checked + nav ul > li {
 			visibility: visible;
-			display: inline-block;
+			display: inline;
 			position: relative;
+			font-size: 1em;
 			z-index: 3;
 		}
 }
@@ -299,6 +310,11 @@ footer > p {
 	.dresspage > img {
 		width: 284px;
 		height: 448px;
+	}
+	div a {
+		display: inline-block;
+		padding: .5em;
+		margin:.5em 0;
 	}
 	.dresspage > div {
 		float: left;

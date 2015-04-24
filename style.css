@@ -31,6 +31,41 @@ nav {
 	font-size: 1.5em;
 	font-weight: 100;
 }
+nav ul > li {
+	display: inline;
+}
+ul li > a {
+	display: inline-block;
+} 
+ul li > a:link, a:visited {
+	text-decoration: none;
+	color: #1E90FF;
+}
+ul li > a:hover, a:active {
+	text-decoration: none;
+	color: #1E90FF;
+	font-weight: bolder;
+}
+.active {
+	color: #1E90FF;
+	font-weight: 400;
+}
+p#intro > a:link, a:visited {
+	text-decoration: none;
+	color: #1E90FF;
+	
+}
+p#intro > a:hover, a:active {
+	text-decoration: none;
+	color: #1E90FF;
+	font-weight: bolder;
+}
+div > a {
+	display: inline-block;
+	text-decoration: none;
+	padding: 2em 1.5em;
+	margin-top: 1em;
+}
 /* code snippet part 1 adapted from codepen 
 http://codepen.io/daramao/pen/XJLOda?editors=110  
 to make nav bar disapper and substitute a toggle menu */
@@ -45,34 +80,6 @@ input {
 	opacity: 0;
 }
 /* end of code snippet part 1 */
-nav ul > li {
-	display: inline;
-}
-ul li > a {
-	display: inline-block;
-}
-p#intro > a:link, a:visited {
-	text-decoration: none;
-	color: #1E90FF;
-} 
-ul li > a:link, a:visited {
-	text-decoration: none;
-	color: #1E90FF;
-}
-p#intro > a:link, a:visited {
-	text-decoration: none;
-	color: #1E90FF;
-	font-weight: bolder;
-}
-ul li > a:hover, a:active {
-	text-decoration: none;
-	color: #1E90FF;
-	font-weight: bolder;
-}
-.active {
-	color: #1E90FF;
-	font-weight: 400;
-}
 hr {
 	border: 1px dashed #B8860B;
 	clear: both;
@@ -130,10 +137,13 @@ li {
 	font-size: 1.2em;
 	line-height: 1em;
 }
+div > ul {
+	margin-top: .5em;
+}
 div > ul > li {
 	max-width: 20em;
 	font-size: 1em;
-	line-height: 1.5em;
+	line-height: 1.2em;
 }
 footer {
 	background-color: #fff;
@@ -273,6 +283,11 @@ footer > p {
 	.dresspage > img {
 		width: 284px;
 		height: 448px;
+	}
+	div a {
+		display: inline-block;
+		margin: .5em 0;
+		padding: .5em;
 	}
 	.dresspage > div {
 		float: left;
