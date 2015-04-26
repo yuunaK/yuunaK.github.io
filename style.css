@@ -187,6 +187,9 @@ footer > p {
 	nav ul > li {
 		display: none;
 	}
+	ul input:checked + span {
+		opacity: 0.5;
+	}
 	ul input:checked ~ li {
 		position: relative;
 		display: inline-block;
