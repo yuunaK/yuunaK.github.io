@@ -1,3 +1,4 @@
+/* General rules entire site */
 * {
 	border: 0;
 	padding: 0;
@@ -9,10 +10,19 @@ body {
 	font-size: 16px;
 	color: #333;
 }
-section#dresses, .dresspage {
-	/*background-color: rgba(245,245,220,.05);*/
-	background-color: rgba(245,245,220,.2);
+a {
+	text-decoration: none;
+	color: #222;
 }
+h2 {
+	font-family: 'Lato', sans-serif;
+	color: #222;
+	border-top: 10px solid #222;
+	padding-top: 1em;
+	padding-left: 1.2em;
+	padding-bottom: 1em;
+}
+/* Rules for styling header */
 h1 {
 	font-family: 'Playfair Display SC', serif;
 	font-size: 3em;
@@ -26,7 +36,7 @@ nav {
 	display: block;
 	background-color: #222;
 	text-align: center;
-	margin: 1em 0;
+	margin-top: .2em;
 }
 nav ul > li {
 	display: inline;
@@ -35,6 +45,7 @@ nav ul > li {
 li > a {
 	text-decoration: none;
 	color: #fff;
+	font-family: 'Lato', sans-serif;
 	font-size: 1em;
 	line-height: 1.5em;
 	padding: .5em;
@@ -43,18 +54,19 @@ li > a:hover, a:active {
 	background-color: #fff;
 	color: #333;
 }
-img {
+/* Rule to style home section of index,html */
+section#splashimage > a > img {
 	width: 600px;
 	display: block;
 	margin: 2em auto;
 }
-h2 {
-	font-family: 'Lato', sans-serif;
-	color: #222;
-	border-top: 10px solid #222;
-	padding-top: 1em;
-	padding-left: 1.2em;
-	padding-bottom: 1em;
+section#splashimage > a > img:hover {
+	border: 2px solid #fff;
+}
+/* Rules to style dresses section of index.html */
+section#dresses {
+	/*background-color: rgba(245,245,220,.05);*/
+	background-color: rgba(245,245,220,.2);
 }
 section#dresses  img {
 	margin: 2em auto 2em 2em;
@@ -64,6 +76,9 @@ section#dresses  img {
 section#dresses .clearfix:nth-last-child(2) > div > a > img {
 	width: 240px;
 	height: 240px;
+}
+section#dresses img:hover {
+	border: 1px solid #fff;
 }
 section#dresses .clearfix div {
 	float: left;
@@ -79,7 +94,8 @@ p > span {
 	font-size: 1em;
 	line-height: 1.5em;
 }
-p, section#about ul > li {
+/* Rules to style 'container' section */
+p, ul > li {
 	max-width: 25em;
 	font-size: 1em;
 	line-height: 1.2em;
@@ -99,15 +115,48 @@ section#about, section#policies {
 section#policies {
 	border-left: 5px solid #222;
 }
-.dresspage div > h3 {
+/* Rules to style dress pages */
+body#details {
+	background-color: rgba(245,245,220,.2);
+}
+body#details > header {
+	background-color: #fff;
+}
+section#dressdetails {
+	width: 100%;
+}
+section#dressdetails > img {
+	margin: 2em;
+}
+section#dressdetails div {
+	float: right;
+	position: relative;
+	top: 7em;
+	right: 20%;
+}
+div > h3 {
 	font-family: 'Lato', sans-serif;
 	color: #222;
+	padding-left: 1.8em;
+	margin-bottom: 1em;
 }
+section#dressdetails div ul > li {
+	list-style: none;
+}
+section#dressdetails div  a {
+	display: inline-block;
+	margin: 3em;
+	color: #aaa;
+}
+section#dressdetails div a:hover {
+	color: #222;
+}
+/* Rules to style footers */
 footer {
 	/*background-color: rgba(200, 145, 123, .5);*/
 	background-color: rgba(245,245,220,.2);
 	/*border-top: 10px solid #222;*/
-	margin-top: 2em;
+	padding-top: 2em;
 	padding: .5em;
 }
 footer p {
@@ -117,7 +166,6 @@ footer p {
 	font-size: 80%;
 }
 footer p a {
-	text-decoration: none;
 	color: rgba(245,145,123,1);
 }
 .clearfix:after {
