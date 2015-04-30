@@ -94,6 +94,16 @@ p > span {
 	font-size: 1em;
 	line-height: 1.5em;
 }
+section#dresses .clearfix div:nth-child(even) > a {
+	display: inline-block;
+	font-size: .9em;
+	color: #888;
+	margin-top: 1.5em;
+	padding-left: 2em;
+}
+section#dresses .clearfix div:nth-child(even) > a:hover {
+	color: #222;
+}
 /* Rules to style 'container' section */
 p, ul > li {
 	max-width: 25em;
