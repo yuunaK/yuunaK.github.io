@@ -1,0 +1,186 @@
+/* font families used in document 
+	font-family: 'Josefin Slab', serif;
+	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Quicksand', sans-serif;
+*/
+/* General style rules for website */
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #F0FFFF;
+	background-image: url("images/sun.png");
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 100vh;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	font-size: 12dp;
+	color: rgba(70,130,180,1);
+	position: relative;
+}
+body#dressPage {
+	background-image: none;
+	position: relative;
+}
+section, main, footer {
+	display: block;
+}
+/* Rules to style header */
+h1 {
+	font-size: 3.75em;
+	line-height: 1em;
+	float: left;
+	margin-bottom: -0.1em;
+}
+nav {
+	float: right;
+	display: block;
+	margin-top: 1.5em;
+}
+nav > ul {
+	list-style: none;
+}
+nav > ul  li {
+	display: inline;
+	font-size: 1.5em;
+}
+nav > ul li > a {
+	display: inline-block;
+	padding-right: .5em;
+} 
+nav > ul li > a:link, a:visited {
+	text-decoration: none;
+	color: rgba(70,130,180,.5);
+}
+nav > ul li > a:hover, a:active {
+	text-decoration: none;
+	color: rgba(70,130,180,1);
+	font-weight: bolder;
+}
+a#active {
+	color: rgba(70,130,180,.9);
+	font-weight: 400;
+}
+input {
+	opacity: 0;
+}
+span {
+	display: none;
+}
+hr {
+	border: 1px dashed rgba(184,134,11,1);
+	clear: both;
+}
+/* Rules to style footer */
+footer {
+	position: absolute;
+	bottom: 0;
+	right: 48%;
+}
+/* Rules to style index page */
+section#splash {
+	position: absolute;
+	bottom: 3em;
+	right: 0;
+}
+section#splash > p {
+	font-size: 2em;
+}
+section#splash > p > a {
+	text-decoration: none;
+	color: rgba(70,130,180,.5);
+}
+section#splash > p > a:hover {
+	text-decoration: none;
+	color: rgba(70,130,180,1);
+}
+/* Rules to style dresses page */
+section#dress-images h2 {
+	font-size: 2em;
+	margin-top: 1.5em;
+	margin-left: 1em;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	display: inline-block;
+}
+section#dress-images div {
+	margin: 1em 5em;
+}
+section#dress-images img {
+	margin: 3em;
+	width: 299px;
+	height: 428px;
+	cursor: pointer;
+}
+/* Rules to style individual dress pages */
+.dresspage > img {
+	float: left;
+	cursor: inherit;
+	width: 384px;
+	height: 548px;
+	margin: 3em 5em;
+}
+.dresspage div {
+	float: right;
+	margin-top: 5em;
+	margin-right: 15em;
+}
+.dresspage div h3 {
+	font-size: 1.5em;
+	display: inline-block;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.dresspage div ul > li {
+	list-style: none;
+	padding-bottom: 1em;
+	max-width: 20em;
+}
+/* Rules to style aboutStitchery page */
+section#about {
+	margin-top: 2em;
+	margin-left: 3em;
+}
+section#about h2 {
+	font-size: 2em;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	display: inline-block;
+}
+section#about ul > li {
+	list-style: none;
+	padding-bottom: .5em;
+}
+section#about p, ul > li {
+	max-width: 25em;
+}
+/* Rules to style policies page */
+section#policies {
+	margin-top: 2em;
+	margin-left: 3em;
+}
+section#policies h2 {
+	font-size: 2em;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	display: inline-block;
+}
+section#policies p {
+	max-width: 25em;
+	margin-bottom: 1em;
+}
+.clearfix:after {
+	visibility: hidden;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	clear: both;
+}

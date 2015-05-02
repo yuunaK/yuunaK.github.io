@@ -8,9 +8,9 @@ body {
 	background-image: url("images/sun.png");
 	background-repeat: no-repeat;
 	background-position: center;
-	font: 400 18px 'Josefin Slab' serif;
+	font: 100 12dp 'Josefin Slab' serif;
 	color: #4682B4;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
 }
 body#dressPage {
 	background-image: none;
@@ -29,7 +29,6 @@ nav {
 	float: right;
 	margin: 1em 0 0 0;
 	font-size: 1.5em;
-	font-weight: 100;
 }
 nav ul > li {
 	display: inline;
@@ -52,8 +51,7 @@ ul li > a:hover, a:active {
 }
 p#intro > a:link, a:visited {
 	text-decoration: none;
-	color: #1E90FF;
-	
+	color: #1E90FF;	
 }
 p#intro > a:hover, a:active {
 	text-decoration: none;
@@ -115,27 +113,29 @@ main img:hover {
 p {
 	text-align: left;
 	color: #4682B4;
-	font: 400 1.2em/1.5em 'Josefin Slab', serif;
+	font: 400 1.2em/1.5em 'Josefin Slab' serif;
 	max-width: 25em;
 	margin-bottom: 1em;
 }
 p#intro {
-	/*margin: 35% 0 auto auto;*/
-	margin: 10em 1em 1em auto;
+	margin: 14em 0 1em auto;
 	max-width: 20em;
 	font: 2.5em 'Quicksand' sans-serif;
 	text-align: right;
 }
-ul {
+section#policies {
+	padding-bottom: 4em;
+}
+section#about ul {
 	list-style: square inside;
-	/*font-size: 1.2em;*/
-	/*max-width: 25em;*/
+	padding-bottom: 9em;
 }
 li {
 	padding: .5em;
 	max-width: 25em;
 	font-size: 1.2em;
 	line-height: 1em;
+	font-weight:100;
 }
 div > ul {
 	margin-top: .5em;
@@ -146,11 +146,12 @@ div > ul > li {
 	line-height: 1.2em;
 }
 footer {
-	background-color: #fff;
+	width: 100%;
+	position: relative;
 }
 footer > p {
 	display: block;
-	font-size: 16px;
+	font-size: 12px;
 	position: relative;
 	left: 48%;
 }
@@ -163,15 +164,17 @@ footer > p {
 	clear: both;
 }
 /* sizing the nav bar */
-@media only screen and (min-width: 450px) and (max-width: 955px) {
+@media only screen and (min-width: 675px) and (max-width: 955px) {
 	nav {
 		font-size: 1em;
 	}
 }
-@media only screen and (max-width: 449px) {
+@media only screen and (max-width: 674px) {
+	h1 {
+		font-size: 2em;
+	}
 	.menu {
-		display: inherit;
-		position: relative;
+		display: inline-block;
 		text-align: center;
 	}
 	ul input {
@@ -197,11 +200,10 @@ footer > p {
 	}
 }
 
-/* sizing the index page */
+/* sizing the index page 
 @media only screen and (min-width: 945px) and (max-width: 1075px) {
 	p#intro {
-		transition: visibility .25s linear;
-		margin: 10em 1em 1em auto;
+		margin: 15em 0em 1em auto;
 	}
 	body#splash footer {
 		margin-top: -1em;
@@ -209,12 +211,12 @@ footer > p {
 }
 @media only screen and (min-width: 934px) and (max-width: 944) {
 	p#intro {
-		margin: 10em -10em 1em auto;
+		margin: 20em 0em 1em auto;
 	}
-}
+}*/
 @media only screen and (max-width: 720px) {
 	p#intro {
-	margin: 18em 1em 1em 1em;
+	margin: 30em 1em 1em 1em;
 	font-size: 1.25em;
 	max-width: 100%;
 	text-align: left;
@@ -230,8 +232,8 @@ footer > p {
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 500px) {
-	section {
-		margin: 5em 1em 3em 1em;
+	section#policies {
+		margin: 5em 1em 8em 1em;
 	}
 	section > p {
 		font-size: 1em;
