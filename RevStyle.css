@@ -19,7 +19,8 @@ body {
 	min-height: 100vh;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 400;
-	font-size: 12dp;
+	font-size: 16px;
+	line-height: 1.5em;
 	color: rgba(70,130,180,1);
 	position: relative;
 }
@@ -48,6 +49,7 @@ nav > ul {
 nav > ul  li {
 	display: inline;
 	font-size: 1.5em;
+	line-height: 1em;
 }
 nav > ul li > a {
 	display: inline-block;
@@ -63,7 +65,7 @@ nav > ul li > a:hover, a:active {
 	font-weight: bolder;
 }
 a#active {
-	color: rgba(70,130,180,.9);
+	color: rgba(70,130,180,.8);
 	font-weight: 400;
 }
 input {
@@ -85,7 +87,7 @@ footer {
 /* Rules to style index page */
 section#splash {
 	position: absolute;
-	bottom: 3em;
+	bottom: 5em;
 	right: 0;
 }
 section#splash > p {
@@ -104,6 +106,7 @@ section#dress-images h2 {
 	font-size: 2em;
 	margin-top: 1.5em;
 	margin-left: 1em;
+	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
 	display: inline-block;
 }
@@ -115,6 +118,9 @@ section#dress-images img {
 	width: 299px;
 	height: 428px;
 	cursor: pointer;
+}
+section#dress-images img:hover {
+	border: 2px solid #F0FFFF;
 }
 /* Rules to style individual dress pages */
 .dresspage > img {
@@ -132,6 +138,7 @@ section#dress-images img {
 .dresspage div h3 {
 	font-size: 1.5em;
 	display: inline-block;
+	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -139,7 +146,19 @@ section#dress-images img {
 .dresspage div ul > li {
 	list-style: none;
 	padding-bottom: 1em;
-	max-width: 20em;
+	max-width: 22em;
+	font-family: 'Lora', serif;
+}
+.dresspage div a {
+	text-decoration: none;
+	color: rgba(70,130,180,.5);
+	display: inline-block;
+	margin-right: 1.5em;
+	margin-top: 1.5em;
+}
+.dresspage div a:hover {
+	text-decoration: none;
+	color: rgba(70,130,180,1);
 }
 /* Rules to style aboutStitchery page */
 section#about {
@@ -150,15 +169,15 @@ section#about h2 {
 	font-size: 2em;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
+	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
 	display: inline-block;
 }
-section#about ul > li {
-	list-style: none;
-	padding-bottom: .5em;
-}
-section#about p, ul > li {
+section#about p {
 	max-width: 25em;
+	margin-bottom: 1em;
+	font-family: 'Lustria', serif;
+	line-height: 1.2em;
 }
 /* Rules to style policies page */
 section#policies {
@@ -169,12 +188,14 @@ section#policies h2 {
 	font-size: 2em;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
+	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
 	display: inline-block;
 }
 section#policies p {
 	max-width: 25em;
 	margin-bottom: 1em;
+	font-family: 'Lustria', serif;
 }
 .clearfix:after {
 	visibility: hidden;
@@ -183,4 +204,11 @@ section#policies p {
 	font-size: 0;
 	height: 0;
 	clear: both;
+}
+/* Media Queries: making site responsive */
+/* Making Index Page Responsive */
+@media only screen and (max-width: 784px) {
+	body {
+		font-size: 12px;
+	}
 }
