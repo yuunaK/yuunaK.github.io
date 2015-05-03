@@ -1,9 +1,11 @@
-/* font families used in document 
-	font-family: 'Josefin Slab', serif;
-	font-family: 'Josefin Sans', sans-serif;
+/******************************************* 
+font families used in document 
+	font-family: 'Lora', serif;
 	font-family: 'Quicksand', sans-serif;
-*/
-/* General style rules for website */
+*******************************************/
+/****************************** 
+General style rules for website 
+*******************************/
 * {
 	border: 0;
 	padding: 0;
@@ -13,7 +15,7 @@
 body {
 	background-color: #F0FFFF;
 	background-image: url("images/sun.png");
-	background-size: auto;
+	background-size: 75%;
 	background-repeat: no-repeat;
 	background-position: center center;
 	min-height: 100vh;
@@ -31,9 +33,11 @@ body#dressPage {
 section, main, footer {
 	display: block;
 }
-/* Rules to style header */
+/******************** 
+Rules to style header 
+*********************/
 h1 {
-	font-size: 3.75em;
+	font-size: 3em;
 	line-height: 1em;
 	float: left;
 	margin-bottom: -0.1em;
@@ -41,7 +45,7 @@ h1 {
 nav {
 	float: right;
 	display: block;
-	margin-top: 1.5em;
+	margin-top: 1.2em;
 }
 nav > ul {
 	list-style: none;
@@ -78,17 +82,22 @@ hr {
 	border: 1px dashed rgba(184,134,11,1);
 	clear: both;
 }
-/* Rules to style footer */
+/********************* 
+Rules to style footer 
+**********************/
 footer {
 	position: absolute;
 	bottom: 0;
 	right: 48%;
 }
-/* Rules to style index page */
+/************************* 
+Rules to style index page 
+**************************/
 section#splash {
 	position: absolute;
 	bottom: 5em;
 	right: 0;
+	margin-bottom: 2em;
 }
 section#splash > p {
 	font-size: 2em;
@@ -101,10 +110,12 @@ section#splash > p > a:hover {
 	text-decoration: none;
 	color: rgba(70,130,180,1);
 }
-/* Rules to style dresses page */
+/***************************
+Rules to style dresses page 
+*****************************/
 section#dress-images h2 {
-	font-size: 2em;
-	margin-top: 1.5em;
+	font-size: 1.5em;
+	margin-top: 2em;
 	margin-left: 1em;
 	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
@@ -122,9 +133,12 @@ section#dress-images img {
 section#dress-images img:hover {
 	border: 2px solid #F0FFFF;
 }
-/* Rules to style individual dress pages */
+/******************************************* 
+Rules to style individual dress detail pages 
+********************************************/
 .dresspage > img {
 	float: left;
+	display: inline-block;
 	cursor: inherit;
 	width: 384px;
 	height: 548px;
@@ -132,11 +146,13 @@ section#dress-images img:hover {
 }
 .dresspage div {
 	float: right;
+	display: inline-block;
 	margin-top: 5em;
 	margin-right: 15em;
+	margin-bottom: 2em;
 }
 .dresspage div h3 {
-	font-size: 1.5em;
+	font-size: 1em;
 	display: inline-block;
 	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
@@ -160,14 +176,17 @@ section#dress-images img:hover {
 	text-decoration: none;
 	color: rgba(70,130,180,1);
 }
-/* Rules to style aboutStitchery page */
+/**********************************
+Rules to style aboutStitchery page
+***********************************/
 section#about {
 	margin-top: 2em;
 	margin-left: 3em;
+	margin-bottom: 2em;
 }
 section#about h2 {
-	font-size: 2em;
-	margin-top: 1.5em;
+	font-size: 1.5em;
+	margin-top: 3em;
 	margin-bottom: 1em;
 	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
@@ -176,17 +195,20 @@ section#about h2 {
 section#about p {
 	max-width: 25em;
 	margin-bottom: 1em;
-	font-family: 'Lustria', serif;
+	font-family: 'Lora', serif;
 	line-height: 1.2em;
 }
-/* Rules to style policies page */
+/******************************* 
+Rules to style policies page 
+********************************/
 section#policies {
 	margin-top: 2em;
 	margin-left: 3em;
+	margin-bottom: 2em;
 }
 section#policies h2 {
-	font-size: 2em;
-	margin-top: 1.5em;
+	font-size: 1.5em;
+	margin-top: 3em;
 	margin-bottom: 1em;
 	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
@@ -195,7 +217,7 @@ section#policies h2 {
 section#policies p {
 	max-width: 25em;
 	margin-bottom: 1em;
-	font-family: 'Lustria', serif;
+	font-family: 'Lora', serif;
 }
 .clearfix:after {
 	visibility: hidden;
@@ -205,8 +227,9 @@ section#policies p {
 	height: 0;
 	clear: both;
 }
-/* Media Queries to make site responsive */
-/* Making Index Page Responsive */
+/*********************************************
+Media Queries to make index page responsive 
+**********************************************/
 @media only screen and (max-width: 784px) {
 	body {
 		font-size: 12px;
@@ -215,12 +238,156 @@ section#policies p {
 @media only screen and (max-width: 598px) {
 	h1 {
 		font-size: 2.75em;
-		margin-bottom: -0.2em;
+	}
+	nav {
+		margin-top: 0.5em;
 	}
 	section#splash > p {
 		font-size: 1.5em;
 	}
 	body {
+		font-size: 10px;
 		background-size: 65%;
 	}
+	footer {
+		margin-top: 3em;
+	}
 }
+/**********************************************
+Media queries to make dresses page responsive 
+***********************************************/
+@media only screen and (max-width: 1370px) {
+	section#dress-images div {
+	margin: 1em 4em;
+	}
+	section#dress-images img {
+	margin: 2em;
+	width: 299px;
+	height: 428px;
+	}	
+}
+@media only screen and (max-width: 1250px) {
+	section#dress-images div {
+	margin: 1em 3em;
+	}
+	section#dress-images img {
+		margin: 2em;
+	}
+}
+@media only screen and (max-width: 1222px) {
+	section#dress-images img {
+		margin: 4em;
+	}
+}
+@media only screen and (max-width: 1095px) {
+	section#dress-images div {
+	margin: 1em 4em;
+	}
+	section#dress-images img {
+	margin: 3em;
+	width: 206px;
+	height: 295px;
+	cursor: pointer;
+	}
+}
+@media only screen and (max-width: 1088px) {
+	section#dress-images div {
+		margin: 1em 3em;
+	}
+	section#dress-images img {
+		margin: 2em;
+	}
+}
+@media only screen and (max-width: 970px) {
+	section#dress-images div {
+		margin: 1em 3em;
+	}
+	section#dress-images img {
+		margin: 2em;
+	}
+}
+@media only screen and (max-width: 900px) {
+	section#dress-images img {
+		margin: 4em;
+	}
+}
+@media only screen and (max-width: 693px) {
+	section#dress-images img {
+		margin: 2em;
+	}
+}
+@media only screen and (max-width: 611) {
+	section#dress-images div {
+		margin: 1em auto 3em;
+	}
+	section#dress-images img {
+		margin: 1em auto;
+	}
+}
+/*************************************************** 
+Media queries to make dress details pages responsive 
+****************************************************/
+@media only screen and (max-width: 1150px) {
+	.dresspage img {
+		width: 362px;
+		height: 484px;
+		margin: 3em;
+	}
+	.dresspage div {
+		margin-right: 5em;
+	}
+	.dresspage div h3, ul > li {
+		font-size: 1em;
+	}
+}
+@media only screen and (max-width: 892px) {
+	.dresspage img {
+		width: 269px;
+		height: 384px;
+		margin: 4em 3em;
+	}
+	.dresspage ul > li {
+		font-size: .8em;
+	}
+}
+@media only screen and (max-width: 785px) {
+	.dresspage div ul > li {
+		font-size: 1em;
+	}
+	.dresspage div h3 {
+		font-size: 1em;
+	}
+}
+@media only screen and (max-width: 678px) {
+	.dresspage div {
+		float: none;
+		margin: 1em 4em 4em;
+	}
+	.dresspage img {
+		margin: 4em 3em 2em;
+	}
+}
+@media only screen and (max-width: 615px) {
+	.dresspage div ul > li {
+		font-size: 1.2em;
+	}
+	.dresspage div h3 {
+		font-size: 1.2em;
+	}
+	.dresspage div {
+		float: none;
+		margin: 1em 3em 3em;
+	}
+	.dresspage img {
+		margin: 4em 2em 2em;
+	}
+}
+
+
+
+
+
+
+
+
+
