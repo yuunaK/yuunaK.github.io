@@ -253,8 +253,8 @@ Media Queries to make index page responsive
 Media queries to make policies and about pages responsive
 *********************************************************/
 @media only screen and (max-width: 420px) {
-	section#policies, section#about {
-		margin-bottom: 5em;
+	footer {
+		position: relative;
 	}
 /**********************************************
 Media queries to make dresses page responsive 
@@ -384,6 +384,7 @@ Media queries to make dress details pages responsive
 	.dresspage img {
 		margin: 4em 2em 2em;
 	}
+
 }
 
 
