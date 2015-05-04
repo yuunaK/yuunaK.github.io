@@ -233,7 +233,7 @@ section#policies p {
 /********************************************
 Media queries to make responsive toggle menu
 *********************************************/
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 650px) {
 	header nav ul span {
 		display: inline-block;
 		text-align: center;
@@ -287,9 +287,14 @@ Media Queries to make site responsive
 /********************************************************
 Media queries to make footer responsive
 *********************************************************/
-@media only screen and (max-width: 548px) {
+@media only screen and (max-width: 640px) {
 	footer {
 		margin-top: 2em;
+		padding-top: 1em;
+	}
+	section#about, section#policies {
+		margin-bottom: 2em;
+		padding-bottom: 2em;
 	}
 }
 
