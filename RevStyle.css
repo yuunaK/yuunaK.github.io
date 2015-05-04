@@ -255,6 +255,8 @@ Media queries to make policies and about pages responsive
 @media only screen and (max-width: 360px) {
 	section#about + footer, section#policies + footer {
 		display: none;
+		opacity: 0;
+		visibility: none;
 	}
 /**********************************************
 Media queries to make dresses page responsive 
