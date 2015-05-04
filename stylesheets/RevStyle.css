@@ -262,11 +262,6 @@ Media queries to make responsive toggle menu
 		z-index: 2;
 	}
 }
-@media only screen and (max-width: 360px) {
-	header nav ul input:checked ~ li {
-		font-size: 7px;
-	}
-}
 /*********************************************
 Media Queries to make site responsive 
 **********************************************/
@@ -309,6 +304,9 @@ Media queries to make footer responsive
 		opacity: 0;
 		visibility: none;
 	}*/
+	body {
+		font-size: 7px;
+	}
 /**********************************************
 Media queries to make dresses page responsive 
 ***********************************************/
