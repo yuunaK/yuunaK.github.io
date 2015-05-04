@@ -185,7 +185,7 @@ Rules to style aboutStitchery page
 section#about {
 	margin-top: 2em;
 	margin-left: 3em;
-	margin-bottom: 2em;
+	margin-bottom: 5em;
 }
 section#about h2 {
 	font-size: 1.5em;
@@ -207,7 +207,7 @@ Rules to style policies page
 section#policies {
 	margin-top: 2em;
 	margin-left: 3em;
-	margin-bottom: 2em;
+	margin-bottom: 5em;
 }
 section#policies h2 {
 	font-size: 1.5em;
