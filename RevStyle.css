@@ -1,5 +1,5 @@
 /******************************************* 
-font families used in document 
+font families used 
 	font-family: 'Lora', serif;
 	font-family: 'Quicksand', sans-serif;
 *******************************************/
@@ -299,10 +299,13 @@ Media queries to make footer responsive
 }
 
 @media only screen and (max-width: 360px) {
-	section#about + footer, section#policies + footer {
+	/*section#about + footer, section#policies + footer {
 		display: none;
 		opacity: 0;
 		visibility: none;
+	}*/
+	body {
+		font-size: 7px;
 	}
 /**********************************************
 Media queries to make dresses page responsive 
