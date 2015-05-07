@@ -3,9 +3,9 @@ font families used
 	font-family: 'Lora', serif;
 	font-family: 'Quicksand', sans-serif;
 *******************************************/
-/****************************** 
-General style rules for website 
-*******************************/
+/****************************************
+General style rules for stitchery website 
+*****************************************/
 * {
 	border: 0;
 	padding: 0;
@@ -230,13 +230,47 @@ section#policies p {
 	height: 0;
 	clear: both;
 }
+/*********************************************
+Media Queries to make site responsive 
+**********************************************/
+@media only screen and (max-width: 784px) {
+	body {
+		font-size: 12px;
+		line-height: 1.5em;
+	}
+}
+@media only screen and (max-width: 640px) {
+	footer {
+		margin-top: 2em;
+		padding-top: 1em;
+	}
+	section#about, section#policies {
+		margin-bottom: 2em;
+		padding-bottom: 2em;
+	}
+}
+@media only screen and (max-width: 598px) {
+	h1 {
+		font-size: 2.75em;
+	}
+	nav {
+		margin-top: 0.5em;
+	}
+	section#splash > p {
+		font-size: 1.5em;
+	}
+	body {
+		font-size: 10px
+		line-height: 2em;
+		background-size: 65%;
+	}
 /********************************************
 Media queries to make responsive toggle menu
 *********************************************/
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 550px) {
 	header nav ul span {
 		display: inline-block;
-		text-align: center;
+		text-align: left;
 		font-size: 1.5em;
 		z-index: 1;
 	}
@@ -260,56 +294,22 @@ Media queries to make responsive toggle menu
 		position: relative;
 		display: inline-block;
 		z-index: 2;
+		font-size: 1em;
+		line-height: 1.5em;
 	}
 }
-/*********************************************
-Media Queries to make site responsive 
-**********************************************/
-@media only screen and (max-width: 784px) {
-	body {
-		font-size: 12px;
-	}
-}
-@media only screen and (max-width: 598px) {
-	h1 {
-		font-size: 2.75em;
-	}
-	nav {
-		margin-top: 0.5em;
-	}
-	section#splash > p {
-		font-size: 1.5em;
-	}
-	body {
-		font-size: 10px;
-		background-size: 65%;
-	}
-/********************************************************
-Media queries to make footer responsive
-*********************************************************/
-@media only screen and (max-width: 640px) {
-	footer {
-		margin-top: 2em;
-		padding-top: 1em;
-	}
-	section#about, section#policies {
-		margin-bottom: 2em;
-		padding-bottom: 2em;
-	}
-}
-
-@media only screen and (max-width: 360px) {
-	/*section#about + footer, section#policies + footer {
+/*@media only screen and (max-width: 360px) {
+	section#about + footer, section#policies + footer {
 		display: none;
 		opacity: 0;
 		visibility: none;
-	}*/
+	}
 	body {
 		font-size: 7px;
 	}
 /**********************************************
 Media queries to make dresses page responsive 
-***********************************************/
+***********************************************
 @media only screen and (max-width: 1370px) {
 	section#dress-images div {
 	margin: 1em 4em;
@@ -380,7 +380,7 @@ Media queries to make dresses page responsive
 }
 /*************************************************** 
 Media queries to make dress details pages responsive 
-****************************************************/
+****************************************************
 @media only screen and (max-width: 1150px) {
 	.dresspage > img#image {
 		width: 362px;
