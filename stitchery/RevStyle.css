@@ -90,8 +90,8 @@ Rules to style footer
 footer {
 	position: absolute;
 	bottom: 0;
-	right: 48%;
-	margin-top: 3em;
+	right: 50%;
+	margin-top: .5em;
 }
 /************************* 
 Rules to style index page 
@@ -242,7 +242,7 @@ Media Queries to make site responsive
 @media only screen and (max-width: 640px) {
 	footer {
 		margin-top: 2em;
-		padding-top: 1em;
+		padding-top: 3em;
 	}
 	section#about, section#policies {
 		margin-bottom: 2em;
