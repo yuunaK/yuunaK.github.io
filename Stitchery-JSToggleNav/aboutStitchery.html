@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initialscale=1">
 		<title> Stitchery: Handmade Dresses for Women</title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
 		<link rel="stylesheet" type="text/css" href="RevStyle.css">
+		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+		
 	</head>
 	<body>
 		<header>
 			<h1>Stitchery</h1>
-			<input type="checkbox">
 			<nav role="navigation">
 				<ul>
-					<li><a href="index.html" class="active">home</a></li>
+					<input type="checkbox">
+					<span>&#9776;</span> 
+					<li><a href="index.html" target="_self">home</a></li>
 					<li><a href="dresses.html" target="_self">dresses</a></li>
-					<li><a href="aboutStitchery.html" target="_self">about</a></li>
-					<li><a href="aboutStitchery.html" target ="_self">contact</a></li>
+					<li><a href="aboutStitchery.html" id="active">about</a></li>
+					<li><a href="aboutStitchery.html">contact</a></li>
 					<li><a href="policies.html" target="_self">policies</a></li>
 				</ul>
-				<label for="checkbox">&#9776</label>
 			</nav>
+			<div class="mobile-nav">
+				<div class="menu-btn" id="menu-btn">
+					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="responsive-menu">
+					<ul>
+						<li><a href="index.html" target="_self">home</a></li>
+						<li><a href="dresses.html" target="_self">dresses</a></li>
+						<li><a href="aboutStitchery.html" id="active">about</a></li>
+						<li><a href="aboutStitchery.html">contact</a></li>
+						<li><a href="policies.html" target="_self">policies</a></li>
+					</ul>
+				</div>
+			</div>
 			<hr>
 		</header>
 		<section id="about">
@@ -39,6 +58,13 @@
 		<footer>
 			<p>&copy;2015 Stitchery</p>
 		</footer>
+		<script type="text/javascript">
+	jQuery(function($){
+    	     $( '.menu-btn' ).click(function(){
+    	     $('.responsive-menu').toggleClass('expand')
+    	     })
+        })
+</script>
 	</body>	
 </html>
 
