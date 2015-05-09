@@ -1,4 +1,4 @@
-/* General rules entire site */
+/* General style rules for entire stitchery5 site: one page scroll with dress photo on landing page */
 * {
 	border: 0;
 	padding: 0;
@@ -25,22 +25,22 @@ h2 {
 /* Rules for styling header */
 h1 {
 	font-family: 'Playfair Display SC', serif;
-	font-size: 3em;
+	font-size: 300%;
 }
 h1 > span {
 	font-family: 'Junge', serif;
-	font-size: 16px;
+	font-size: 30%;
 	font-weight: lighter;
 }
 nav {
 	display: block;
-	background-color: #222;
 	text-align: center;
+	background-color: #222;
 	margin-top: .2em;
 }
 nav ul > li {
 	display: inline;
-	margin: 0 5em 0;
+	margin: 0 10% 0;
 }
 li > a {
 	text-decoration: none;
@@ -85,6 +85,7 @@ section#dresses .clearfix div {
 }
 div > p {
 	margin-top: 4em;
+	margin-left: 2em;
 	font-size: .9em;
 	line-height: 1.5em;
 	max-width: 20em;
@@ -105,7 +106,7 @@ section#dresses .clearfix div:nth-child(even) > a:hover {
 	color: #222;
 }
 /* Rules to style 'container' section */
-p, ul > li {
+section#policies p, section#about ul > li {
 	max-width: 25em;
 	font-size: 1em;
 	line-height: 1.2em;
@@ -135,30 +136,40 @@ body#details > header {
 section#dressdetails {
 	width: 100%;
 }
-section#dressdetails > img {
-	margin: 2em;
-}
 section#dressdetails div {
-	float: right;
-	position: relative;
-	top: 7em;
-	right: 20%;
+	width: 45%;
+	display: inline-block;
 }
-div > h3 {
+section#dressdetails div#photo-container > img {
+	margin: 1em;
+	width: 70%;
+}
+section#dressdetails div#dress-description {
+	float: right;
+	margin: 5em 5em 3em 0em;
+
+}
+section#dressdetails div#dress-description > h3 {
 	font-family: 'Lato', sans-serif;
 	color: #222;
-	padding-left: 1.8em;
-	margin-bottom: 1em;
+
 }
-section#dressdetails div ul > li {
+section#dressdetails div#dress-description ul {
+	margin-bottom: 2em;
+	margin-top: 1em;
+
+}
+section#dressdetails div#dress-description ul > li {
 	list-style: none;
+	padding-bottom: .5em;
+	max-width: 25em;
 }
-section#dressdetails div  a {
+section#dressdetails div#dress-description a {
 	display: inline-block;
-	margin: 3em;
+	padding-right: 4em;
 	color: #aaa;
 }
-section#dressdetails div a:hover {
+section#dressdetails div#dress-description a:hover {
 	color: #222;
 }
 /* Rules to style footers */
@@ -172,7 +183,6 @@ footer {
 footer p {
 	text-align: center;
 	position: relative;
-	left: 37%;
 	font-size: 80%;
 }
 footer p a {
@@ -185,4 +195,83 @@ footer p a {
 	height: 0;
 	font-size: 0;
 	clear: both;
+}
+/***************************************
+Media Queries
+***************************************/
+@media only screen and (max-width: 1135px) {
+	section#dresses .clearfix div {
+		float: none;
+	}
+	section#dresses div > p {
+		margin-top: 1em;
+		font-size: .9em;
+		line-height: 1.5em;
+		max-width: 20em;
+		margin-left: 2em;
+	}
+	section#dresses  img {
+		margin: 2em auto 0 2em;
+		width: 240px;
+		height: 320px;
+	}
+	section#dresses .clearfix div:nth-child(even) > a {
+		display: inline-block;
+		font-size: .9em;
+		color: #888;
+		margin-top: .5em;
+		padding-left: 2em;
+	}
+}
+@media only screen and (max-width: 876px) {
+	section#about, section#policies {
+		float: none;
+		width: 100%;
+		margin-bottom: 2em;
+	}
+	section#policies {
+		border: none;
+	}
+	h2 {
+		font-family: 'Lato', sans-serif;
+		color: #222;
+		border-top: 3px solid #222;
+		padding-top: 1em;
+		padding-left: 1.2em;
+		padding-bottom: 0.5em;
+		width: 100%
+	}
+}
+@media only screen and (max-width: 844px) {
+	section#dressdetails div#dress-description {
+		float: none;
+		width: 85%;
+		margin: 1em 2em 2em 2em;
+	}
+	section#dressdetails div#photo-container {
+		width: 95%;
+	}
+}
+@media only screen and (max-width: 640px) {
+	section#splashimage {
+		width: 95%;
+		overflow: hidden;
+		display: block;
+		margin: 2em auto;
+	}
+	section#splashimage > a > img {
+		width: 75%;
+		display: block;
+		margin: 2em auto;
+	}
+}
+@media only screen and (max-width: 600px) {
+	nav ul li {
+		display: block;
+	}
+}
+@media only screen and (max-width: 628px) {
+	h1 > span {
+		display: none;
+	}
 }
