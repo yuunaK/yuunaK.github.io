@@ -141,12 +141,16 @@ section#dressdetails div {
 	display: inline-block;
 }
 section#dressdetails div#photo-container > img {
-	margin: 1em;
+	margin: 3em;
 	width: 70%;
+}
+section#dressdetails div#photo-container > img#rosedress {
+	margin: 3em;
+	width: 85%;
 }
 section#dressdetails div#dress-description {
 	float: right;
-	margin: 5em 5em 3em 0em;
+	margin: 7em 5em 3em 0em;
 
 }
 section#dressdetails div#dress-description > h3 {
