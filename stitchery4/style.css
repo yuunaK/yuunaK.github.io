@@ -12,7 +12,7 @@ body {
 	background-image: url("images/sun.png");
 	background-size: 75%;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 50% -2%;
 	min-height: 100vh;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 400;
@@ -20,13 +20,6 @@ body {
 	line-height: 1.5em;
 	color: rgba(70,130,180,1);
 	position: relative;
-}
-body#dressPage {
-	background-image: none;
-	position: relative;
-}
-section, main, footer {
-	display: block;
 }
 /******************** 
 Rules to style header 
@@ -54,7 +47,7 @@ nav > ul  li {
 }
 nav > ul li > a {
 	display: inline-block;
-	padding-right: .5em;
+	padding-right: 2em;
 } 
 nav > ul li > a:link, a:visited {
 	text-decoration: none;
@@ -64,10 +57,6 @@ nav > ul li > a:hover, a:active {
 	text-decoration: none;
 	color: rgba(70,130,180,1);
 	font-weight: bolder;
-}
-a#active {
-	color: rgba(70,130,180,.8);
-	font-weight: 400;
 }
 header nav ul input {
 	opacity: 0;
@@ -83,22 +72,21 @@ hr {
 Rules to style footer 
 **********************/
 footer {
-	position: absolute;
-	bottom: 0;
-	right: 50%;
-	margin-top: .5em;
+	text-align: center;
+	position: relative;
 }
 /************************* 
 Rules to style index page 
 **************************/
 section#splash {
-	position: ;
-	bottom: 5em;
-	right: 0;
+	position: relative;
+	margin-top: 45%;
 	margin-bottom: 2em;
+	text-align: right;
 }
 section#splash > p {
 	font-size: 2em;
+	line-height: 1.5em;
 }
 section#splash > p > a {
 	text-decoration: none;
@@ -109,14 +97,16 @@ section#splash > p > a:hover {
 	color: rgba(70,130,180,1);
 }
 /***************************
-Rules to style dresses page 
+Rules to style dresses section 
 *****************************/
-section#dress-images h2 {
+.clearfix > h2, section#dress-images h2 {
 	font-size: 1.5em;
-	margin-top: 2em;
-	margin-left: 1em;
+	margin: 3em 0 1em 0;
+	display: inline-block;
+	padding-top: 2em;
+	padding-left: 3em;
 	padding-bottom: .2em;
-	border-bottom: 1px dashed rgba(184,134,11,1);
+	border-bottom: 1px dashed rgba(70,130,180,1);
 	display: inline-block;
 }
 section#dress-images div {
@@ -131,91 +121,100 @@ section#dress-images img {
 section#dress-images img:hover {
 	border: 2px solid #F0FFFF;
 }
-/******************************************* 
-Rules to style individual dress detail pages 
-********************************************/
-.dresspage > img {
-	float: left;
-	display: inline-block;
-	cursor: inherit;
-	width: 384px;
-	height: 548px;
-	margin: 3em 5em;
+/****************************************************************** 
+Rules to style dress detail sections (h2 styled in dresses section)
+*******************************************************************/
+.dresspage {
+	width: 100%;
 }
 .dresspage div {
-	float: right;
+	width: 50%;
 	display: inline-block;
-	margin-top: 5em;
-	margin-right: 15em;
-	margin-bottom: 2em;
 }
-.dresspage div > h3 {
+.dresspage div#photo-container > img {
+	cursor: inherit;
+	width: 65%;
+	margin: 3em 5em;
+}
+.dresspage div#dress-description {
+	display: inline-block;
+	float: right;
+	position: relative;
+	top: 3em;
+	
+}
+.dresspage div#dress-description > h3 {
 	font-size: 1em;
 	display: inline-block;
 	padding-bottom: .2em;
-	border-bottom: 1px dashed rgba(184,134,11,1);
+	border-bottom: 1px dashed rgba(70,130,180,1);
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-.dresspage div ul li {
+.dresspage div#dress-description ul li {
 	list-style: none;
 	padding-bottom: 1em;
 	max-width: 22em;
 	font-family: 'Lora', serif;
 }
-.dresspage div a {
+.dresspage div#dress-description a {
 	text-decoration: none;
 	color: rgba(70,130,180,.5);
 	display: inline-block;
 	margin-right: 1.5em;
 	margin-top: 1.5em;
 }
-.dresspage div a:hover {
+.dresspage div#dress-description a:hover {
 	text-decoration: none;
 	color: rgba(70,130,180,1);
 }
-/**********************************
-Rules to style aboutStitchery page
-***********************************/
+/************************************
+Rules to style aboutStitchery section
+*************************************/
 section#about {
+	position: relative;
 	margin-top: 2em;
-	margin-left: 3em;
 	margin-bottom: 5em;
 }
 section#about h2 {
 	font-size: 1.5em;
 	margin-top: 2em;
+	padding-top: 2em;
+	padding-left: 3em;
 	margin-bottom: 1em;
 	padding-bottom: .2em;
-	border-bottom: 1px dashed rgba(184,134,11,1);
+	border-bottom: 1px dashed rgba(70,130,180,1);
 	display: inline-block;
 }
 section#about p {
 	max-width: 25em;
 	margin-bottom: 1em;
 	font-family: 'Lora', serif;
-	line-height: 1.2em;
+	margin-left: 4.5em;
 }
 /******************************* 
-Rules to style policies page 
+Rules to style policies section 
 ********************************/
 section#policies {
+	position: relative;
 	margin-top: 2em;
-	margin-left: 3em;
 	margin-bottom: 5em;
 }
 section#policies h2 {
 	font-size: 1.5em;
 	margin-top: 3em;
+	padding-top: 2em;
 	margin-bottom: 1em;
 	padding-bottom: .2em;
-	border-bottom: 1px dashed rgba(184,134,11,1);
+	padding-left: 3em;
+	border-bottom: 1px dashed rgba(70,130,180,1);
 	display: inline-block;
 }
 section#policies p {
 	max-width: 25em;
-	margin-bottom: 1em;
+	margin-bottom: 1.2em;
 	font-family: 'Lora', serif;
+	margin-left: 4.5em;
 }
 .clearfix:after {
 	visibility: hidden;
@@ -228,41 +227,43 @@ section#policies p {
 /*********************************************
 Media Queries to make site responsive 
 **********************************************/
-@media only screen and (max-width: 784px) {
-	body {
-		font-size: 12px;
+@media only screen and (max-width: 910px) {
+	section#splash {
+		position: relative;
+		margin-top: .5em;
+		margin-bottom: 2em;
+		text-align: center;
+	}
+	section#splash > p {
+		font-size: 1.2em;
 		line-height: 1.5em;
 	}
 }
-@media only screen and (max-width: 640px) {
-	footer {
-		margin-top: 2em;
-		padding-top: 3em;
+@media only screen and (max-width: 885px) {
+	.dresspage div#dress-description {
+		float: none;
 	}
-	section#about, section#policies {
-		margin-bottom: 2em;
-		padding-bottom: 2em;
+	.dresspage div {
+		width: 100%;
+	}
+	.dresspage div#dress-description {
+		position: relative;
+		top: 0;
+		margin: 0 1em;
+	}
+	.dresspage div#dress-description a {
+		margin-top: .5em;
+	}
+	.dresspage div#photo-container img {
+		margin: 1em 2em;
+		width: 288px;
+		height: 384px;
 	}
 }
-@media only screen and (max-width: 598px) {
-	h1 {
-		font-size: 2.75em;
-	}
-	nav {
-		margin-top: 0.5em;
-	}
-	section#splash > p {
-		font-size: 1.5em;
-	}
-	body {
-		font-size: 10px
-		line-height: 2em;
-		background-size: 65%;
-	}
 /********************************************
 Media queries to make responsive toggle menu
 *********************************************/
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 700px) {
 	header nav ul span {
 		display: inline-block;
 		text-align: left;
@@ -291,5 +292,54 @@ Media queries to make responsive toggle menu
 		z-index: 2;
 		font-size: 1em;
 		line-height: 1.5em;
+	}
+}
+/*********************************************
+back to media queries to make site responsive
+**********************************************/
+@media only screen and (max-width: 640px) {
+	footer {
+		margin-top: 2em;
+		padding-top: 3em;
+	}
+	section#about, section#policies {
+		margin-bottom: 2em;
+		padding-bottom: 2em;
+	}
+}
+@media only screen and (max-width: 598px) {
+	h1 {
+		font-size: 2.75em;
+	}
+	nav {
+		margin-top: 0.5em;
+	}
+}
+@media only screen and (max-width: 500px) {
+	h2 {
+		display: block;
+		text-align: center;
+		border: none;
+	}
+	section#dress-images div {
+		margin: 1em;
+	}
+	section#dress-images img {
+		margin: 1em;
+		width: 299px;
+		height: 428px;
+		cursor: pointer;
+	}
+	section#about, section#policies {
+		position: relative;
+		margin-top: 0em;
+		margin-bottom: 5em;
+	}
+	section#about h2, section#policies h2 {
+		margin-top: 2em;
+		text-align: center;
+	}
+	section#about p, section#policies p {
+		margin-left: 1em;
 	}
 }

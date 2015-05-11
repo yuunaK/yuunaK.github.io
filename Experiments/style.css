@@ -1,0 +1,9 @@
+body {
+	background-image: url('IMG_0637.JPG');
+	background-size: cover;
+}
+section {
+	background-color: #fff;
+	opacity: 0.5;
+	border: 1px solid #CD6889;
+}
