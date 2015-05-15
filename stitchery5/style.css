@@ -72,6 +72,7 @@ section#dresses  img {
 	margin: 2em auto 2em 2em;
 	width: 240px;
 	height: 320px;
+	box-shadow: 0 10px 15px rgba(0,0,0,.5)
 }
 section#dresses .clearfix:nth-last-child(2) > div > a > img {
 	width: 240px;
