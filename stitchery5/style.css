@@ -67,6 +67,7 @@ section#splashimage > a > img:hover {
 section#dresses {
 	/*background-color: rgba(245,245,220,.05);*/
 	background-color: rgba(245,245,220,.2);
+
 }
 section#dresses  img {
 	margin: 2em auto 2em 2em;
@@ -272,7 +273,7 @@ Media Queries
 }
 @media only screen and (max-width: 600px) {
 	nav ul li {
-		display: block;
+		display: ;
 	}
 }
 @media only screen and (max-width: 628px) {
