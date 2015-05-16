@@ -17,8 +17,7 @@ a {
 h2 {
 	font-family: 'Lato', sans-serif;
 	color: #222;
-	border-top: 10px solid #222;
-	padding-top: 1em;
+	padding-top: 1.5em;
 	padding-left: 1.2em;
 	padding-bottom: 1em;
 }
@@ -42,7 +41,7 @@ nav ul > li {
 	display: inline;
 	margin: 0 10% 0;
 }
-li > a {
+nav ul li > a {
 	text-decoration: none;
 	color: #fff;
 	font-family: 'Lato', sans-serif;
@@ -50,7 +49,7 @@ li > a {
 	line-height: 1.5em;
 	padding: .5em;
 }
-li > a:hover, a:active {
+nav ul li > a:hover, a:active {
 	background-color: #fff;
 	color: #333;
 }
@@ -67,45 +66,35 @@ section#splashimage > a > img:hover {
 section#dresses {
 	/*background-color: rgba(245,245,220,.05);*/
 	background-color: rgba(245,245,220,.2);
-	margin: 0 auto;
-
+	margin: 1em auto;
+}
+section#dresses .clearfix div {
+	float: left;
+	width: 25%;
 }
 section#dresses  img {
-	margin: 2em auto 2em 2em;
+	margin: 2em;
 	width: 240px;
 	height: 320px;
 	box-shadow: 0 10px 15px rgba(0,0,0,.5)
 }
-section#dresses .clearfix:nth-last-child(2) > div > a > img {
+section#dresses .clearfix div:last-child > a > img {
 	width: 240px;
 	height: 240px;
 }
 section#dresses img:hover {
-	border: 1px solid #fff;
+	border: 5px solid #fff;
 }
-section#dresses .clearfix div {
-	float: left;
-}
-div > p {
-	margin-top: 4em;
-	margin-left: 2em;
+section#dresses .clearfix div p {
+	margin-top: -1em;
+	margin-left: 1em;
+	text-align: center;
 	font-size: .9em;
 	line-height: 1.5em;
-	max-width: 15em;
-}
-p > span {
-	font-family: 'Lato', sans-serif;
-	font-size: 1em;
-	line-height: 1.5em;
-}
-section#dresses .clearfix div:nth-child(even) > a {
-	display: inline-block;
-	font-size: .9em;
+	max-width: 20em;
 	color: #888;
-	margin-top: 1.5em;
-	padding-left: 2em;
-}
-section#dresses .clearfix div:nth-child(even) > a:hover {
+ }
+section#dresses .clearfix div p:hover {
 	color: #222;
 }
 /* Rules to style 'container' section */
@@ -121,6 +110,9 @@ section#about ul > li {
 }
 section#container {
 	width: 100%;
+	border-top: 10px solid #222;
+	margin-top: 0;
+	padding-top: 0;
 }
 section#about, section#policies {
 	width: 50%;
@@ -181,11 +173,8 @@ section#dressdetails div#dress-description a:hover {
 }
 /* Rules to style footers */
 footer {
-	/*background-color: rgba(200, 145, 123, .5);*/
-	background-color: rgba(245,245,220,.2);
-	/*border-top: 10px solid #222;*/
-	padding-top: 2em;
-	padding: .5em;
+	padding: 1em;
+	margin: 1em;
 }
 footer p {
 	text-align: center;
@@ -206,35 +195,33 @@ footer p a {
 /***************************************
 Media Queries
 ***************************************/
-@media only screen and (max-width: 1135px) {
+@media only screen and (max-width: 1205px) {
 	section#dresses .clearfix div {
-		float: none;
+		width: 33.33%;
 	}
-	section#dresses div > p {
-		margin-top: 1em;
-		font-size: .9em;
-		line-height: 1.5em;
-		max-width: 20em;
-		margin-left: 2em;
-	}
-	section#dresses  img {
-		margin: 2em auto 0 2em;
-		width: 240px;
-		height: 320px;
-	}
-	section#dresses .clearfix div:nth-child(even) > a {
-		display: inline-block;
-		font-size: .9em;
-		color: #888;
-		margin-top: .5em;
-		padding-left: 2em;
+	section#dresses .clearfix div:last-child {
+		width: 45%;
 	}
 }
-@media only screen and (max-width: 876px) {
+@media only screen and (max-width: 856px) {
+	section#dresses .clearfix div {
+		width: 50%;
+	}
+}
+@media only screen and (max-width: 844px) {
+	section#dressdetails div#dress-description {
+		float: none;
+		width: 85%;
+		margin: 1em 2em 2em 2em;
+	}
+	section#dressdetails div#photo-container {
+		width: 95%;
+	}
+}	
+@media only screen and (max-width: 740px) {
 	section#about, section#policies {
 		float: none;
-		width: 100%;
-		margin-bottom: 2em;
+		width: 90%;
 	}
 	section#policies {
 		border: none;
@@ -247,16 +234,6 @@ Media Queries
 		padding-left: 1.2em;
 		padding-bottom: 0.5em;
 		width: 100%
-	}
-}
-@media only screen and (max-width: 844px) {
-	section#dressdetails div#dress-description {
-		float: none;
-		width: 85%;
-		margin: 1em 2em 2em 2em;
-	}
-	section#dressdetails div#photo-container {
-		width: 95%;
 	}
 }
 @media only screen and (max-width: 640px) {
@@ -275,5 +252,25 @@ Media Queries
 @media only screen and (max-width: 628px) {
 	h1 > span {
 		display: none;
+	}
+}
+@media only screen and (max-width: 617px) {
+	section#dresses .clearfix {
+		margin-bottom: 3em;
+	}
+	section#dresses .clearfix div:last-child {
+		width: 100%;
+	}
+	section#dresses .clearfix div:last-child p {
+	margin-top: -1em;
+	margin-left: 1em;
+	width: 100;
+	font-size: .9em;
+	line-height: 1.5em;
+	}
+}
+@media only screen and (max-width: 553px) {
+	section#dresses .clearfix  div {
+		width: 100%;
 	}
 }
