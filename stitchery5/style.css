@@ -205,6 +205,10 @@ Media Queries
 	section#dresses .clearfix div {
 		width: 33.33%;
 	}
+	/*section#dresses .clearfix div:nth-last-child(2),
+	div:nth-last-child(3) {
+		margin-left: 7em;
+	}*/
 	section#dresses .clearfix div:last-child {
 		width: 45%;
 	}
@@ -234,6 +238,7 @@ Media Queries
 	section#about, section#policies {
 		float: none;
 		width: 90%;
+		padding-bottom: 1em; 
 	}
 	section#policies {
 		border: none;
