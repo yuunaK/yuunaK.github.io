@@ -14,7 +14,7 @@ div#center {
     background: linear-gradient(360deg, #ffeeee #fff); /* Standard syntax (must be last) */
 }
 div.side-floral {
-	background-image: url('IMG_0637.JPG');
+	background-image: url('images/IMG_0637.JPG');
 	background-size: cover;
 	width: 15%;
 }
