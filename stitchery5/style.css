@@ -253,7 +253,7 @@ Media Queries
 		width: 100%
 	}
 }
-@media only screen and (max-width: 648px) {
+@media only screen and (max-width: 689px) {
 	h1 > span {
 		display: none;
 	}
