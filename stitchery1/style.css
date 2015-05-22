@@ -1,11 +1,14 @@
 /******************************************* 
-font families used 
+font families used from Google Fonts
 	font-family: 'Lora', serif;
 	font-family: 'Quicksand', sans-serif;
+
+Stitchery ver 1 implements responsive CSS 
+hamburger menu 
 *******************************************/
-/********************************************** 
-General style rules for StitcheryAltNav website 
-***********************************************/
+/****************************************
+General style rules for stitchery website 
+*****************************************/
 * {
 	border: 0;
 	padding: 0;
@@ -28,19 +31,25 @@ body {
 }
 body#dressPage {
 	background-image: none;
-	position: relative; 
+	position: relative;
 }
-header, section, div, footer {
+header, section, footer {
 	display: block;
+	width: 100%;
+	max-width: 1500px;
 }
 /******************** 
 Rules to style header 
 *********************/
 h1 {
+	padding-left: 1em;
 	font-size: 3em;
 	line-height: 1em;
 	float: left;
 	margin-bottom: -0.1em;
+}
+h1 > a {
+	text-decoration: none;
 }
 nav {
 	float: right;
@@ -52,14 +61,14 @@ nav > ul {
 	position: relative;
 	display: block;
 }
-nav > ul  li {
+nav > ul li {
 	display: inline;
 	font-size: 1.5em;
 	line-height: 1em;
 }
 nav > ul li > a {
 	display: inline-block;
-	padding-right: .5em;
+	padding-right: 1em;
 } 
 nav > ul li > a:link, a:visited {
 	text-decoration: none;
@@ -74,24 +83,15 @@ a#active {
 	color: rgba(70,130,180,.8);
 	font-weight: 400;
 }
-header  input {
+header nav ul input {
 	opacity: 0;
 }
-header nav label {
+header nav ul span {
 	display: none;
 }
 hr {
 	border: 1px dashed rgba(184,134,11,1);
 	clear: both;
-}
-/********************* 
-Rules to style footer 
-**********************/
-footer {
-	position: absolute;
-	bottom: 0;
-	right: 48%;
-	margin-top: 3em;
 }
 /************************* 
 Rules to style index page 
@@ -99,11 +99,12 @@ Rules to style index page
 section#splash {
 	position: absolute;
 	bottom: 5em;
-	right: 0;
+	text-align: right;
 	margin-bottom: 2em;
 }
 section#splash > p {
 	font-size: 2em;
+	line-height: 2em;
 }
 section#splash > p > a {
 	text-decoration: none;
@@ -119,13 +120,14 @@ Rules to style dresses page
 section#dress-images h2 {
 	font-size: 1.5em;
 	margin-top: 2em;
-	margin-left: 1em;
+	margin-left: 5em;
 	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
 	display: inline-block;
 }
 section#dress-images div {
 	margin: 1em 5em;
+	width: 95%;
 }
 section#dress-images img {
 	margin: 3em;
@@ -143,18 +145,18 @@ Rules to style individual dress detail pages
 	float: left;
 	display: inline-block;
 	cursor: inherit;
-	width: 384px;
-	height: 548px;
-	margin: 3em 5em;
+	width: 95%;
+	width: 484px;
+	height: 648px;
+	margin: 2em 5em 5em;
 }
 .dresspage div {
-	float: right;
+	float: left;
 	display: inline-block;
 	margin-top: 5em;
-	margin-right: 15em;
 	margin-bottom: 2em;
 }
-.dresspage div h3 {
+.dresspage div > h3 {
 	font-size: 1em;
 	display: inline-block;
 	padding-bottom: .2em;
@@ -162,7 +164,7 @@ Rules to style individual dress detail pages
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-.dresspage div ul > li {
+.dresspage div ul li {
 	list-style: none;
 	padding-bottom: 1em;
 	max-width: 22em;
@@ -222,6 +224,16 @@ section#policies p {
 	margin-bottom: 1em;
 	font-family: 'Lora', serif;
 }
+/********************* 
+Rules to style footer 
+**********************/
+footer {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	margin-top: 3em;
+}
+/***********************/
 .clearfix:after {
 	visibility: hidden;
 	content: " ";
@@ -233,171 +245,7 @@ section#policies p {
 /*********************************************
 Media Queries to make site responsive 
 **********************************************/
-@media only screen and (max-width: 784px) {
-	body {
-		font-size: 12px;
-	}
-}
-
-@media only screen and (max-width: 640px) {
-	footer {
-		margin-top: 2em;
-		padding-top: 1em;
-	}
-	section#about, section#policies {
-		margin-bottom: 2em;
-		padding-bottom: 2em;
-	}
-}
-@media only screen and (max-width: 598px) {
-	body {
-		font-size: 10px;
-		background-size: 65%;
-	}
-	h1 {
-		font-size: 2.75em;
-	}
-	nav {
-		margin-top: 0.5em;
-	}
-	section#splash > p {
-		font-size: 1.5em;
-	}
-}
-/********************************************
-Media queries to make responsive toggle menu
-*********************************************/
-@media only screen and (max-width: 449px) {
-	header {
-		position: relative;
-	}
-	header input {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
-		z-index: 1;
-	}
-	header nav > ul {
-		max-height: 0;
-		overflow: hidden;
-	}
-	header nav ul li {
-		display: none;
-	}
-	header nav label {
-		display: block;
-		cursor: pointer;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: -1;
-		font-size: 2em;
-		margin: .3em;
-	}
-	header input {
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 2;
-		cursor: pointer;
-	}
-	input:checked + nav label {
-		opacity: 0.5;
-	}
-	input:checked + nav > ul {
-		max-height: 300px;
-	}
-	input:checked + nav ul li {
-			visibility: visible;
-			display: inline-block;
-			position: relative;
-			margin-top: 2em;
-			font-size: 1em;
-			z-index: 3;
-		}
-}
-/********************************************************
-Media queries to make footer responsive
-*********************************************************/
-
-/*@media only screen and (max-width: 360px) {
-	/*section#about + footer, section#policies + footer {
-		display: none;
-		opacity: 0;
-		visibility: none;
-	}
-	body {
-		font-size: 7px;
-	}*/
-/*************************************************** 
-Media queries to make dress details pages responsive 
-****************************************************/
-/*@media only screen and (max-width: 1150px) {
-	.dresspage img {
-		width: 362px;
-		height: 484px;
-		margin: 3em;
-	}
-	.dresspage img div {
-		margin-right: 5em;
-	}
-	.dresspage div h3, ul li {
-		font-size: 1em;
-	}
-}
-@media only screen and (min-width: 892px) and (max-width: 1099px) {
-	.dresspage img {
-		width: 269px;
-		height: 384px;
-		margin: 4em 3em;
-	}
-	.dresspage ul > li {
-		font-size: .8em;
-	}
-}
-@media only screen and (max-width: 785px) {
-	.dresspage div ul > li {
-		font-size: 1em;
-	}
-	.dresspage div h3 {
-		font-size: 1em;
-	}
-}
-@media only screen and (max-width: 678px) {
-	.dresspage div {
-		float: none;
-		margin: 1em 4em 4em;
-	}
-	.dresspage img {
-		margin: 4em 3em 2em;
-	}
-}
-@media only screen and (max-width: 615px) {
-	.dresspage div ul > li {
-		font-size: 1.2em;
-	}
-	.dresspage div h3 {
-		font-size: 1.2em;
-	}
-	.dresspage div {
-		float: none;
-		margin: 1em 3em 3em;
-	}
-	.dresspage img {
-		margin: 4em 2em 2em;
-	}
-}
-/**************************************************
-Media queries to make dresses page responsive
-***************************************************/
- /*@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1370px) {
 	section#dress-images div {
 	margin: 1em 4em;
 	}
@@ -406,6 +254,16 @@ Media queries to make dresses page responsive
 	width: 299px;
 	height: 428px;
 	}	
+}
+@media only screen and (max-width: 1253px) {
+	.dresspage div {
+		margin: 5em 0 3em 0;
+		padding: 0;
+	}
+	.dresspage img {
+		margin: 3em 2em 3em 0;
+		padding: 0;
+	}
 }
 @media only screen and (max-width: 1250px) {
 	section#dress-images div {
@@ -452,9 +310,101 @@ Media queries to make dresses page responsive
 		margin: 4em;
 	}
 }
-@media only screen and (max-width: 693px) {
+@media only screen and (max-width: 882px) {
+	.dresspage div {
+		float: none;
+		margin-top: 0;
+		padding-left: 2em;
+	}
+}
+@media only screen and (max-width: 880px) {
+	section#splash {
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 877px) {
+	.dresspage div {
+		float: none;
+		margin-top: 0;
+		padding-left: 2em;
+	}
+}
+@media only screen and (max-width: 850px) {
+	.dresspage div {
+		float: none;
+		margin: 0 0 5em 1em;
+		padding: 0;
+	}
+	.dresspage img {
+		margin: 0;
+		padding: 0;
+	}
+}
+/********************************************
+Media queries to make responsive toggle menu
+*********************************************/
+@media only screen and (max-width: 800px) {
+	header nav ul span {
+		display: inline-block;
+		padding-right: 1em;
+		text-align: left;
+		font-size: 1.5em;
+		z-index: 1;
+	}
+	header nav ul input {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		cursor: pointer;
+	}
+	header nav ul  li {
+		display: none;
+	}
+	header nav ul input:checked + span{
+		opacity: 0.5;
+	}
+	header nav ul input:checked ~ li {
+		position: relative;
+		display: inline-block;
+		z-index: 2;
+		font-size: 1em;
+		line-height: 1.5em;
+	}
+}
+/********************************************
+Back to media queries to make site responsive
+*********************************************/
+@media only screen and (max-width: 774px) {
+	section#dress-images h2 {
+		margin-left: 2.2em;
+	}
 	section#dress-images img {
-		margin: 2em;
+		width: 362px;
+		height: 484px;
+		margin: 2em 10em;
+	}
+}
+@media only screen and (max-width: 706px) {
+	section#dress-images img {
+		width: 362px;
+		height: 484px;
+		margin: 2em 7em;
+	}
+}
+@media only screen and (max-width: 640px) {
+	footer {
+		margin-top: 3em;
+		padding-top: 3em;
+	}
+	section#about, section#policies {
+		margin-bottom: 2em;
+		padding: 0 2em 2em;
+		margin-left: 0;
+
 	}
 }
 @media only screen and (max-width: 611) {
@@ -465,9 +415,56 @@ Media queries to make dresses page responsive
 		margin: 1em auto;
 	}
 }
+@media only screen and (max-width: 598px) {
+	h1 {
+		font-size: 2.75em;
+	}
+	nav {
+		margin-top: 0.5em;
+	}
+	section#splash > p {
+		font-size: 1.5em;
+	}
+	body {
+		background-size: 65%;
+	}
+@media only screen and (max-width: 574px) {
+	section#dress-images img {
+		width: 362px;
+		height: 484px;
+		margin: 2em 5em;
+	}
+}
+@media only screen and (max-width: 532px) {
+	.dresspage img {
+		width: 384px;
+		height: 548px;
+		margin: 2em 0;
+		padding: 0;
+	}
+	.dresspage div {
+		margin: 0 0 5em 0;
+		padding: 0 2em 3em;
+	}
+}
+@media only screen and (max-width: 510px) {
+	section#dress-images img {
+		width: 362px;
+		height: 484px;
+		margin: 1em 0;
 
-
-
+	}
+	section#dress-images div {
+		margin: 0;
+	}
+	section#dress-images {
+		margin: 2em 0;
+		padding: 2em 0;
+	}
+	footer {
+		padding-top: 2em;
+	}
+}
 
 
 
