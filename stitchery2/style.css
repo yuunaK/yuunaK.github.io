@@ -2,6 +2,10 @@
 font families used 
 	font-family: 'Lora', serif;
 	font-family: 'Quicksand', sans-serif;
+
+Stitchery ver 2 implements responsive CSS
+hamburger menu which remains stationary -
+remains in its initial position.
 *******************************************/
 /********************************************** 
 General style rules for stitchery2 website 
@@ -84,6 +88,9 @@ header  input {
 	opacity: 0;
 }
 header nav label {
+	display: none;
+}
+nav ul li#mobile-hmlink {
 	display: none;
 }
 hr {
@@ -342,7 +349,7 @@ Media queries to make responsive toggle menu
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: 2;
+		z-index: 1;
 		cursor: pointer;
 	}
 	input:checked + nav label {
@@ -350,15 +357,21 @@ Media queries to make responsive toggle menu
 	}
 	input:checked + nav > ul {
 		max-height: 300px;
+		margin-left: 1em;
 	}
 	input:checked + nav ul li {
-			visibility: visible;
-			display: inline-block;
-			position: relative;
-			margin-top: 2em;
-			font-size: 1em;
-			z-index: 3;
-		}
+		visibility: visible;
+		display: inline-block;
+		position: relative;
+		margin-top: 2em;
+		padding-right: 1em;
+		font-size: 1em;
+		z-index: 3;
+	}
+	input:checked + nav ul li#mobile-hmlink {
+		visibility: visible;
+		display: inline-block;
+	}
 }
 /*********************************************
 back to media queries to make site responsive
