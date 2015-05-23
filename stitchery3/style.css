@@ -1,0 +1,413 @@
+/******************************************* 
+font families used 
+	font-family: 'Lora', serif;
+	font-family: 'Quicksand', sans-serif;
+Stitchery version 3 implements Javascript 
+Responsive Hamburger Navigation
+*******************************************/
+/****************************************** 
+General style rules for sttichery3 website
+*******************************************/
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #F0FFFF;
+	background-image: url("images/sun.png");
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 100vh;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: rgba(70,130,180,1);
+	position: relative;
+}
+body#dressPage {
+	background-image: none;
+	position: relative;
+}
+header, section, footer {
+	display: block;
+	width: 100%;
+	max-width: 1500px;
+}
+/******************** 
+Rules to style header 
+*********************/
+h1 {
+	padding-left: 1em;
+	font-size: 3em;
+	line-height: 1em;
+	float: left;
+	margin-bottom: -0.1em;
+}
+h1 > a {
+	text-decoration: none;
+}
+nav {
+	float: right;
+	display: block;
+	margin-top: 1.2em;
+}
+nav > ul {
+	list-style: none;
+	position: relative;
+	display: block;
+}
+nav > ul  li {
+	display: inline;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+nav > ul li > a {
+	display: inline-block;
+	padding-right: 1em;
+} 
+nav > ul li > a:link, a:visited {
+	text-decoration: none;
+	color: rgba(70,130,180,.5);
+}
+nav > ul li > a:hover, a:active {
+	text-decoration: none;
+	color: rgba(70,130,180,1);
+	font-weight: bolder;
+}
+a#active {
+	color: rgba(70,130,180,.8);
+	font-weight: 400;
+}
+hr {
+	border: 1px dashed rgba(184,134,11,1);
+	clear: both;
+}
+/********************* 
+Rules to style footer 
+**********************/
+footer {
+	position: absolute;
+	bottom: -5%;
+	text-align: center;
+	padding-top: 3em;
+	margin-top: 3em;
+}
+/************************* 
+Rules to style index page 
+**************************/
+section#splash {
+	position: absolute;
+	bottom: 5em;
+	right: 0;
+	margin-bottom: 2em;
+}
+section#splash > p {
+	font-size: 2em;
+	line-height: 2em;
+}
+section#splash > p > a {
+	text-decoration: none;
+	color: rgba(70,130,180,.5);
+}
+section#splash > p > a:hover {
+	text-decoration: none;
+	color: rgba(70,130,180,1);
+}
+/***************************
+Rules to style dresses page 
+*****************************/
+section#dress-images h2 {
+	font-size: 1.5em;
+	margin-top: 2em;
+	margin-left: 1.9em;
+	padding-bottom: .2em;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	display: inline-block;
+}
+section#dress-images div.clearfix {
+	margin: 1em 5%;
+	padding: 0;
+	width: 95%;
+}
+section#dress-images > div.clearfix > div:nth-child(odd) {
+	float: left;
+}
+section#dress-images > div.clearfix > div:nth-child(even) {
+	float: right;
+}
+section#dress-images div.clearfix div img {
+	margin: 3em;
+	padding: 0;
+	height: 640px;
+	cursor: pointer;
+}
+section#dress-images img:hover {
+	border: 2px solid #F0FFFF;
+}
+/******************************************* 
+Rules to style individual dress detail pages 
+********************************************/
+.dresspage > div#photo-container {
+	float: left;
+	width: 45%;
+	cursor: inherit;
+}
+.dresspage > div#photo-container > img {
+	width: 85%;
+	margin: 1em 0;
+	padding: 0;
+}
+.dresspage div#dress-description {
+	float: left;
+	width: 45%;
+	margin: 5em 0 2em 10%;
+	padding: 0;
+}
+.dresspage div#dress-description > h3 {
+	font-size: 1em;
+	display: inline-block;
+	padding-bottom: .2em;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.dresspage div#dress-description ul li {
+	list-style: none;
+	padding-bottom: 1em;
+	max-width: 22em;
+	font-family: 'Lora', serif;
+}
+.dresspage div#dress-description a {
+	text-decoration: none;
+	color: rgba(70,130,180,.5);
+	display: inline-block;
+	margin-right: 1.5em;
+	margin-top: 1.5em;
+}
+.dresspage div#dress-description a:hover {
+	text-decoration: none;
+	color: rgba(70,130,180,1);
+}
+/**********************************
+Rules to style aboutStitchery page
+***********************************/
+section#about {
+	margin-top: 2em;
+	margin-left: 3em;
+	margin-bottom: 5em;
+}
+section#about h2 {
+	font-size: 1.5em;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	padding-bottom: .2em;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	display: inline-block;
+}
+section#about p {
+	max-width: 25em;
+	margin-bottom: 1em;
+	font-family: 'Lora', serif;
+	line-height: 1.5em;
+}
+/******************************* 
+Rules to style policies page 
+********************************/
+section#policies {
+	margin-top: 2em;
+	margin-left: 3em;
+	margin-bottom: 5em;
+}
+section#policies h2 {
+	font-size: 1.5em;
+	margin-top: 3em;
+	margin-bottom: 1em;
+	padding-bottom: .2em;
+	border-bottom: 1px dashed rgba(184,134,11,1);
+	display: inline-block;
+}
+section#policies p {
+	max-width: 25em;
+	margin-bottom: 1em;
+	font-family: 'Lora', serif;
+}
+.clearfix:after {
+	visibility: hidden;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	clear: both;
+}
+/*********************************************
+Java Script Responsive Menu - setup
+**********************************************/
+.mobile-nav {
+	display: none;
+}
+.menu-btn div {
+	position: absolute;
+	left: 100%;
+	top: 64%;
+	padding-right: 8px;
+	margin-top: -0.50em;
+	line-height: 1.2;
+	font-size: 18px;
+	font-weight: 200;
+	vertical-align: middle;
+	z-index: 99;
+}
+
+.menu-btn span {
+	display: block;
+	width: 20px;
+	height: 3px;
+	margin: 4px 0;
+	background: rgb(70,130,180);
+	z-index: 99;
+}
+
+.responsive-menu{
+	display: none;
+}
+
+.expand {
+	display: block !important; 
+	position: absolute;
+	top: 2.7em;
+	right: .5em;
+}
+/*********************************************
+Media Queries to make site responsive 
+**********************************************/
+@media only screen and (max-width: 1263px) {
+	section#dress-images > div.clearfix > div {
+		width: 100%;
+		float: none;
+	}
+}
+@media only screen and (max-width: 1212px) {
+	.dresspage div#dress-description {
+		width: 20%;
+	}
+	.dresspage div#photo-container {
+		width: 60%;
+	}
+	.dresspage div#photo-container img {
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 919px) {
+	.dresspage div {
+		float: none;
+		width: 90%;
+	}
+	.dresspage div#photo-container img {
+		width: 95%;
+		margin: 2em 10%;
+	}
+	.dresspage div#dress-description {
+		width: 75%;
+		padding: 1em 2em;
+		margin: 0 5%;
+	}
+}
+@media only screen and (max-width: 893px) {
+	section#splash p {
+		text-align: center;
+	}
+}
+/*************************************************
+media query js responsive menu
+**************************************************/
+@media only screen and (max-width: 800px) {
+	header > nav {
+		display: none;
+	}
+	.mobile-nav {
+		display: block;
+		text-align: right;
+		visibility: visible;
+		float: right;
+		margin-top: 1em;
+		margin-right: 1em;
+	}
+	.expand {
+
+	}
+	.responsive-menu > ul > li {
+		list-style: none;
+	}
+	.responsive-menu > ul > li > a {
+		text-decoration: none;
+		color: rgb(70,130,180);
+	}
+}
+/*********************************************
+back to media queries to make site responsive
+**********************************************/
+@media only screen and (max-width: 700px) {
+	.dresspage div#photo-container {
+		width: 100%;
+		margin-top: 3em;
+	}
+	.dresspage div#photo-container img {
+		width: 100%;
+		margin: 2em 0;
+	}
+}
+@media only screen and (max-width: 640px) {
+	footer {
+		margin-top: 2em;
+		padding-top: 1em;
+	}
+	section#about, section#policies {
+		margin-bottom: 2em;
+		padding: 0 2em 2em;
+		margin-left: 0;
+	}
+	.dresspage {
+		margin-bottom: 3em;
+		padding-bottom: 2em;
+	}
+}
+@media only screen and (max-width: 600px) {
+	section#dress-images div.clearfix div:nth-child(odd) {
+		float: none;
+	}
+	section#dress-images div.clearfix div:nth-child(even) {
+		float: none;
+	}
+	section#dress-images div.clearfix, div {
+		margin: 0;
+		padding: 0;
+	}
+	section#dress-images > div.clearfix > div > a > img {
+		margin: 3em 0;
+		padding: 0;
+		height: 540px;
+	}
+	section#dress-images > div.clearfix > div:last-child > a > img {
+		height: 640px;
+	}
+}
+@media only screen and (max-width: 598px) {
+	h1 {
+		font-size: 2.75em;
+	}
+	nav {
+		margin-top: 0.5em;
+	}
+	section#splash > p {
+		font-size: 1.5em;
+	}
+	body {
+		background-size: 65%;
+	}
+
+
+
