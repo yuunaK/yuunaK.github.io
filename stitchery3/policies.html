@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="eng-US">
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initialscale=1">
 		<title>Stitchery: Policies</title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="texxt/css" href="RevStyle.css">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
-		
+		<link rel="stylesheet" type="texxt/css" href="style.css">
 	</head>
 	<body>
 		<header>
-			<h1>Stitchery</h1>
+			<h1><a href="index.html">Stitchery</a></h1>
 			<nav role="navigation">
-				<ul> 
-					<input type="checkbox">
-					<span>&#9776;</span>
-					<li><a href="index.html" target="_self">home</a></li>
+				<ul>
 					<li><a href="dresses.html" target="_self">dresses</a></li>
 					<li><a href="aboutStitchery.html" target="_self">about</a></li>
-					<li><a href="aboutStitchery.html" target ="_self">contact</a></li>
 					<li><a href="policies.html" id="active">policies</a></li>
 				</ul>
 			</nav>
+			<div class="mobile-nav">
+				<div class="menu-btn" id="menu-btn">
+					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="responsive-menu">
+					<ul>
+						<li><a href="dresses.html" target="_self">dresses</a></li>
+						<li><a href="aboutStitchery.html" id="active">about</a></li>
+						<li><a href="policies.html" target="_self">policies</a></li>
+					</ul>
+				</div>
+			</div>
 			<hr>
 		</header>
 		<section id="policies">
@@ -38,10 +48,19 @@
 			unworn condition.  Please e-mail us within 2 days of receipt
 			to get a Return Authorization Number.  We will not accept 
 			returns without prior notification.</p>
+			<h2>Contact</h2>
 			<p>Questions? Email: yuuna.kaparti@gmail.com</p>
 		</section>
 		<footer>
 			<p>&copy;2015 Stitchery</p>
 		</footer>
+		<script type="text/javascript">
+			jQuery(function($){
+    	     	$( '.menu-btn' ).click(function(){
+    	     	$('.responsive-menu').toggleClass('expand')
+    	     	})
+        	})
+		</script>
+	</body>
 	</body>	
 </html>

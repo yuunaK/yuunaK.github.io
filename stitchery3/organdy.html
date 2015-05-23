@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initialscale=1">
 		<title>Stitchery: Cotton Organdy Dress</title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="RevStyle.css">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body id="dressPage">
 		<header>
-			<h1>Stitchery</h1>
+			<h1><a href="index.html">Stitchery</a></h1>
 			<nav role="navigation">
 				<ul>
-					<input type="checkbox">
-					<span>&#9776;</span> 
-					<li><a href="index.html" target="_self">home</a></li>
 					<li><a href="dresses.html" class="active">dresses</a></li>
 					<li><a href="aboutStitchery.html" target="_self">about</a></li>
-					<li><a href="aboutStitchery.html" target ="_self">contact</a></li>
 					<li><a href="policies.html" target="_self">policies</a></li>
 				</ul>
 			</nav>
+			<div class="mobile-nav">
+				<div class="menu-btn" id="menu-btn">
+					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="responsive-menu">
+					<ul>
+						<li><a href="dresses.html" target="_self">dresses</a></li>
+						<li><a href="aboutStitchery.html" id="active">about</a></li>
+						<li><a href="policies.html" target="_self">policies</a></li>
+					</ul>
+				</div>
+			</div>
 			<hr>
 		</header>
-		<secton class="dresspage" class="clearfix">
-			<img src="images/greene3M.jpg" alt="Layered Cotton Organdy Dress" title="Layered Cotton Organdy Dress">
-			<div>
+		<section class="dresspage clearfix">
+			<div id="photo-container">
+				<img src="images/greene3M.jpg" alt="Layered Cotton Organdy Dress" title="Layered Cotton Organdy Dress">
+			</div>
+			<div id="dress-description">
 				<h3>Cotton Organdy Dress</h3>
 				<ul>
-					<li>Description: Two dresses: white cotton organdy dress underneath yellow cotton organdy dress. High round neckline. Yellow organdy dress: sleeveless, white organdy dress: cap sleeves. Tuck detail near hem. Calf-length. A-line. Two layer fabric construction for both dresses. Generous hem.</li>
-					<li>Fabric: 100% Cototn Organdy</li>
+					<li>Description: The Cotton Organdy Dress is a fresh crisp dress consisting of two dresses worn together: a yellow cotton organdy dress worn over a white cotton organdy dress. The yellow organdy dress is sleeveless and the white organdy dress has cap sleeves. The yellow organdy dress is finished with a tuck detail near the hem.</li>
+					<li>Fabric: 100% Cotton Organdy</li>
 					<li>Care: Machine wash cold, hang to dry, iron if needed.</li>
 					<li>Price (USD): $484</li>
 				</ul>
 				<a href="greendress.html">previous dress</a>
 				<a href="libertyvoile.html">next dress</a>
 			</div>
-		</secton>
+		</section>
 		<footer>
 			<p>&copy;2015 Stitchery</p>
 		</footer>
+		<script type="text/javascript">
+			jQuery(function($){
+    	     	$( '.menu-btn' ).click(function(){
+    	     	$('.responsive-menu').toggleClass('expand')
+    	     	})
+        	})
+		</script>
 	</body>	
 </html>

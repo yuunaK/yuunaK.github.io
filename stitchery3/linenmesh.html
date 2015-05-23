@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initialscale=1">
 		<title>Stitchery: Linen Mesh Dress</title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="RevStyle.css">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body id="dressPage">
 		<header>
-			<h1>Stitchery</h1>
+			<h1><a href="index.html">Stitchery</a></h1>
 			<nav role="navigation">
 				<ul> 
-					<input type="checkbox">
-					<span >&#9776;</span>
-					<li><a href="index.html" target="_self">home</a></li>
 					<li><a href="dresses.html" class="active">dresses</a></li>
 					<li><a href="aboutStitchery.html" target="_self">about</a></li>
-					<li><a href="aboutStitchery.html" target ="_self">contact</a></li>
 					<li><a href="policies.html" target="_self">policies</a></li>
 				</ul>
 			</nav>
+			<div class="mobile-nav">
+				<div class="menu-btn" id="menu-btn">
+					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="responsive-menu">
+					<ul>
+						<li><a href="dresses.html" target="_self">dresses</a></li>
+						<li><a href="aboutStitchery.html" id="active">about</a></li>
+						<li><a href="policies.html" target="_self">policies</a></li>
+					</ul>
+				</div>
+			</div>
 			<hr>
 		</header>
-		<secton class="dresspage" class="clearfix">
-			<img src="images/greene7M.jpg" alt="Linen Mesh Long Dress" title="Linen Mesh Long Dress">
-			<div>
+		<section class="dresspage clearfix">
+			<div id="photo-container">
+				<img src="images/greene7M.jpg" alt="Linen Mesh Long Dress" title="Linen Mesh Long Dress">
+			</div>
+			<div id="dress-description">
 				<h3>Linen Mesh Dress</h3>
 				<ul>
-					<li>Description: Open weave linen fabric. High round neckline. Sleeveless. Floor length. A-line. Vertical tuck details at back. Two layer fabric construction. Generous hem.</li>
+					<li>Description: The Linen Mesh Dress is an elegant floor length casual dress made of open weave linen fabric. It is a an a-line dress with distinctive vertical tuck details at back.</li>
 					<li>Fabric: 100% Linen</li>
 					<li>Care: Machine wash cold, hang to dry, iron if needed.</li>
 					<li>Price (USD): $369</li>
@@ -38,9 +51,16 @@
 				<a href="libertyvoile.html">previous dress</a>
 				<a href="embroidered.html">next dress</a>
 			</div>
-		</secton>
+		</section>
 		<footer>
 			<p>&copy;2015 Stitchery</p>
 		</footer>
+		<script type="text/javascript">
+			jQuery(function($){
+    	     	$( '.menu-btn' ).click(function(){
+    	     	$('.responsive-menu').toggleClass('expand')
+    	     	})
+        	})
+		</script>
 	</body>	
 </html>

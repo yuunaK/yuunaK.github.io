@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initialscale=1">
 		<title>Stitchery: Liberty Voile Dress</title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="RevStyle.css">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body id="dressPage">
 		<header>
-			<h1>Stitchery</h1>
+			<h1><a href="index.html">Stitchery</a></h1>
 			<nav role="navigation">
 				<ul>
-					<input type="checkbox">
-					<span>&#9776;</span> 
-					<li><a href="index.html" target="_self">home</a></li>
 					<li><a href="dresses.html" id="active">dresses</a></li>
 					<li><a href="aboutStitchery.html" target="_self">about</a></li>
-					<li><a href="aboutStitchery.html" target ="_self">contact</a></li>
 					<li><a href="policies.html" target="_self">policies</a></li>
 				</ul>
 			</nav>
+			<div class="mobile-nav">
+				<div class="menu-btn" id="menu-btn">
+					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="responsive-menu">
+					<ul>
+						<li><a href="dresses.html" target="_self">dresses</a></li>
+						<li><a href="aboutStitchery.html" id="active">about</a></li>
+						<li><a href="policies.html" target="_self">policies</a></li>
+					</ul>
+				</div>
+			</div>
 			<hr>
 		</header>
-		<secton class="dresspage" class="clearfix">
+		<section class="dresspage clearfix">
+			<div id="photo-container">
 			<img src="images/greene6M.jpg" alt="Liberty Cotton Voile Dress" title="Liberty Cotton Voile Dress">
-			<div>
+			</div>
+			<div id="dress-description">
 				<h3>Liberty Voile Dress</h3>
 				<ul>
-					<li>Description: Liberty of London voile fabric.  High round neckline. Sleeveless. Calf-length. A-line. Side panels that wrap to back or front. Two layer fabric construction. Generous hem.</li>
+					<li>Description: The Liberty Voile Dress is a sunny easy dress made of Liberty of London voile fabric. It is an a-line dress with helpful side panels that wrap to back or front.</li>
 					<li>Fabric: 100% Cotton Voile</li>
 					<li>Care: Machine wash cold, hang to dry, iron if needed.</li>
 					<li>Price (USD): $465
@@ -38,9 +51,16 @@
 				<a href="organdy.html">previous dress</a>
 				<a href="linenmesh.html">next dress</a>
 			</div>
-		</secton>
+		</section>
 		<footer>
 			<p>&copy;2015 Stitchery</p>
 		</footer>
+		<script type="text/javascript">
+			jQuery(function($){
+    	     	$( '.menu-btn' ).click(function(){
+    	     	$('.responsive-menu').toggleClass('expand')
+    	     	})
+        	})
+		</script>
 	</body>	
 </html>

@@ -1,47 +1,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initialscale=1">
 		<title>Stitchery: Pink Ramie Linen Dress</title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="RevStyle.css">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body id="dressPage">
 		<header>
-			<h1>Stitchery</h1>
+			<h1><a href="index.html">Stitchery</a></h1>
 			<nav role="navigation">
 				<ul>
-					<input type="checkbox">
-					<span>&#9776;</span> 
-					<li><a href="index.html" target="_self">home</a></li>
 					<li><a href="dresses.html" class="active">dresses</a></li>
 					<li><a href="aboutStitchery.html" target="_self">about</a></li>
-					<li><a href="aboutStitchery.html" target ="_self">contact</a></li>
 					<li><a href="policies.html" target="_self">policies</a></li>
 				</ul>
 			</nav>
+			<div class="mobile-nav">
+				<div class="menu-btn" id="menu-btn">
+					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="responsive-menu">
+					<ul>
+						<li><a href="dresses.html" target="_self">dresses</a></li>
+						<li><a href="aboutStitchery.html" id="active">about</a></li>
+						<li><a href="policies.html" target="_self">policies</a></li>
+					</ul>
+				</div>
+			</div>
 			<hr>
 		</header>
-		<secton class="dresspage" class="clearfix">
-			<img src="images/pinkdressM.jpg" alt="Sleeveless Pink Ramie Linen A-line Dress" title="Sleeveless Pink Ramie Linen Dress">
-			<div>
+		<section class="dresspage clearfix">
+			<div id="photo-container">
+				<img src="images/pinkdressM.jpg" alt="Sleeveless Pink Ramie Linen A-line Dress" title="Sleeveless Pink Ramie Linen Dress">
+			</div>
+			<div id="dress-description">
 				<h3>Pink Ramie Linen Dress</h3>
 				<ul>
-					<li>Description: High round neckline. Sleeveless. Calf-length. A-line. Two layer fabric construction. Generous hem.</li>
+					<li>Description: The Pink Ramie Linen is an elegant easy shift comfortable enough to wear all day long. It has an interesting soft a-line drape created by extending the curve from the armline to the back.</li>
 					<li>Fabric: 100% Ramie Linen</li>
 					<li>Care: Machine wash cold, hang to dry, iron if needed.</li>
 					<li>Price (USD): $216</li>
 				</ul>
 				<a href="dresses.html">back to dresses</a>
 				<a href="vneck.html">next dress</a>
-				
 			</div>
-		</secton>
+		</section>
 		<footer>
 			<p>&copy;2015 Stitchery</p>
 		</footer>
+		<script type="text/javascript">
+			jQuery(function($){
+    	     	$( '.menu-btn' ).click(function(){
+    	     	$('.responsive-menu').toggleClass('expand')
+    	     	})
+        	})
+		</script>
 	</body>	
 </html>

@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initialscale=1">
 		<title>Stitchery: Pleated Apron Panel Dress</title>
 		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="RevStyle.css">
-		<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body id="dressPage">
 		<header>
-			<h1>Stitchery</h1>
+			<h1><a href="index.html">Stitchery</a></h1>
 			<nav role="navigation">
-				<ul> 
-					<input type="checkbox">
-					<span>&#9776;</span>
-					<li><a href="index.html" target="_self">home</a></li>
+				<ul>
 					<li><a href="dresses.html" class="active">dresses</a></li>
 					<li><a href="aboutStitchery.html" target="_self">about</a></li>
-					<li><a href="aboutStitchery.html" target ="_self">contact</a></li>
 					<li><a href="policies.html" target="_self">policies</a></li>
 				</ul>
 			</nav>
+			<div class="mobile-nav">
+				<div class="menu-btn" id="menu-btn">
+					<div></div>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="responsive-menu">
+					<ul>
+						<li><a href="dresses.html" target="_self">dresses</a></li>
+						<li><a href="aboutStitchery.html" id="active">about</a></li>
+						<li><a href="policies.html" target="_self">policies</a></li>
+					</ul>
+				</div>
+			</div>
 			<hr>
 		</header>
-		<secton class="dresspage" class="clearfix">
+		<section class="dresspage clearfix">
+			<div id="photo-container">
 			<img src="images/pleatfrontM.jpg" alt"Pleated Apron Front Pink Ramie Linen Dress" title="Pleated Apron Front Pink Ramie Linen Dress">
-			<div>
+			</div>
+			<div id="dress-description">
 				<h3>Pleated Apron Panel Dress</h3>
 				<ul>
-					<li>Description: Round neckline: low in front, high in back. Sleeveless. Calf-length. A-line. Pleated apron skirt panel in front. Option to wear in reverse with pleated panel at back. Two layer fabric construction. Generous hem.</li>
+					<li>Description: The Pleated Apron Panel Dress is a complex confectionery dress.  It has the playful air of little girls' pinafore built on a very spare a-line dress. The naive pleated apron panel in front adds generous fabric to an otherwise very simple dress. Option to wear in reverse with pleated panel at back.</li>
 					<li>Fabric: 100% Ramie Linen.</li>
 					<li>Care: Machine wash cold, hang to dry, iron if needed.</li>
 					<li>Price (USD): $288</li>
@@ -38,9 +51,16 @@
 				<a href="vneck.html">previous dress</a>
 				<a href="greendress.html">next dress</a>
 			</div>
-		</secton>
+		</section>
 		<footer>
 			<p>&copy;2015 Stitchery</p>
 		</footer>
+		<script type="text/javascript">
+			jQuery(function($){
+    	     	$( '.menu-btn' ).click(function(){
+    	     	$('.responsive-menu').toggleClass('expand')
+    	     	})
+        	})
+		</script>
 	</body>
 </html>
