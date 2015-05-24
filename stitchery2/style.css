@@ -103,8 +103,8 @@ Rules to style index page
 **************************/
 section#splash {
 	width: 100%;
-	min-height: 80vh;
-	margin-bottom: 3em;
+	min-height: 97vh;
+	margin-bottom: 2em;
 	padding-bottom: 1em;
 }
 section#splash div#intro {

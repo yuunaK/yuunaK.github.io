@@ -100,20 +100,25 @@ footer {
 Rules to style index page 
 **************************/
 section#splash {
-	position: absolute;
-	bottom: 5em;
-	right: 0;
-	margin-bottom: 2em;
+	width: 100%;
+	min-height: 97vh;
+	padding-bottom: 2em;
 }
-section#splash > p {
+section#splash div#intro {
+	position: absolute;
+	bottom: 5%;
+	right: 0;
+	padding-bottom: 1em;
+}
+section#splash div#intro > p {
 	font-size: 2em;
 	line-height: 2em;
 }
-section#splash > p > a {
+section#splash > div#intro > p > a {
 	text-decoration: none;
 	color: rgba(70,130,180,.5);
 }
-section#splash > p > a:hover {
+section#splash > div#intro > p > a:hover {
 	text-decoration: none;
 	color: rgba(70,130,180,1);
 }
