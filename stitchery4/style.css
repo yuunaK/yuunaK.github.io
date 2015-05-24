@@ -23,7 +23,14 @@ body {
 }
 header, section, footer {
 	width: 100%;
-	max-width: 1600px;
+	max-width: 1500px;
+}
+section + a {
+	text-decoration: none;
+	color: rgba(70,130,180,1);
+	position: relative;
+	text-align: center;
+	padding-bottom: 2em;
 }
 /******************** 
 Rules to style header 
@@ -73,22 +80,19 @@ hr {
 	border: 1px dashed rgba(184,134,11,1);
 	clear: both;
 }
-section {
-	width: 100%;
-	max-width: 1600px;
-}
 /********************* 
 Rules to style footer 
 **********************/
 footer {
-	text-align: center;
 	position: relative;
+	text-align: center;
+	margin-top: 2em;
 }
 /************************* 
 Rules to style index page 
 **************************/
 section#splash {
-	width: 95%;
+	width: 100%;
 	position: relative;
 	margin-top: 45%;
 	margin-bottom: 2em;
@@ -109,7 +113,7 @@ section#splash > p > a:hover {
 /***************************
 Rules to style dresses section 
 *****************************/
-.clearfix > h2, section#dress-images h2 {
+section#dress-details > h2, section#dress-images h2 {
 	font-size: 1.5em;
 	margin: 3em 0 1em 0;
 	display: inline-block;

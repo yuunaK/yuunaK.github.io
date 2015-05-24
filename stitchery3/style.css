@@ -41,7 +41,7 @@ header, section, footer {
 Rules to style header 
 *********************/
 h1 {
-	padding-left: 1em;
+	padding-left: .5em;
 	font-size: 3em;
 	line-height: 1em;
 	float: left;
@@ -128,7 +128,7 @@ Rules to style dresses page
 section#dress-images h2 {
 	font-size: 1.5em;
 	margin-top: 2em;
-	margin-left: 1.9em;
+	margin-left: .5em;
 	padding-bottom: .2em;
 	border-bottom: 1px dashed rgba(184,134,11,1);
 	display: inline-block;
@@ -153,20 +153,35 @@ section#dress-images div.clearfix div img {
 section#dress-images img:hover {
 	border: 2px solid #F0FFFF;
 }
-section#dresses .clearfix div p {
+section#dress-images .clearfix div:nth-child(odd) p {
 	margin-top: -1em;
-	margin-left: 1em;
+	margin-left: 7em;
 	text-align: center;
 	font-size: .9em;
 	line-height: 1.5em;
 	max-width: 20em;
  }
- section#dresses .clearfix div p > a {
+ section#dress-images .clearfix div:nth-child(even) p {
+	margin-top: -1em;
+	margin-left: 10em;
+	text-align: center;
+	font-size: .9em;
+	line-height: 1.5em;
+	max-width: 20em;
+ }
+ section#dress-images .clearfix div p > a {
  	color: rgb(70,130,180,.5);
  }
-section#dresses .clearfix div p > a:hover {
+section#dress-images .clearfix div p > a:hover {
 	color: rgba(70,10,180,1);
 }
+section#dress-images .clearfix div:last-child {
+	margin-right: 5em;
+}
+section#dress-images .clearfix div:last-child p {
+	margin-left: 7em;
+}
+
 /******************************************* 
 Rules to style individual dress detail pages 
 ********************************************/
@@ -431,6 +446,11 @@ back to media queries to make site responsive
 	}
 	body {
 		background-size: 65%;
+	}
+	.dresspage div#dress-description {
+		width: 95%;
+		padding: 1em 1.5em;
+		margin: 0;
 	}
 
 
