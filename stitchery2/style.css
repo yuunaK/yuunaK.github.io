@@ -43,7 +43,7 @@ header, section, footer {
 Rules to style header 
 *********************/
 h1 {
-	padding-left: 1em;
+	padding-left: .5em;
 	font-size: 3em;
 	line-height: 1em;
 	float: left;
@@ -116,7 +116,7 @@ section#splash div#intro {
 }
 section#splash div#intro > p {
 	font-size: 2em;
-	line-height: 2em;
+	line-height: 1.5em;
 }
 section#splash  div#intro > p > a {
 	text-decoration: none;
@@ -156,6 +156,20 @@ section#dress-images div.clearfix div img {
 }
 section#dress-images img:hover {
 	border: 2px solid #F0FFFF;
+}
+section#dresses .clearfix div p {
+	margin-top: -1em;
+	margin-left: 1em;
+	text-align: center;
+	font-size: .9em;
+	line-height: 1.5em;
+	max-width: 20em;
+ }
+ section#dresses .clearfix div p > a {
+ 	color: rgba(70,130,180,.5);
+ }
+section#dresses .clearfix div p > a:hover {
+	color: rgba(70,130,180,1);
 }
 /******************************************* 
 Rules to style individual dress detail pages 
@@ -426,6 +440,11 @@ back to media queries to make site responsive
 	}
 	nav {
 		margin-top: 0.5em;
+	}
+	section#splash > div#intro {
+		position: absolute;
+		bottom: 2%;
+		padding-bottom: 1em;
 	}
 	section#splash > div#intro > p {
 		font-size: 1.5em;
