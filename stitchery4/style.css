@@ -22,15 +22,19 @@ body {
 	position: relative;
 }
 header, section, footer {
-	width: 100%;
-	max-width: 1500px;
+	width: 80%;
+	margin: 0 5%;
+	max-width: 1450px;
 }
 section + a {
 	text-decoration: none;
 	color: rgba(70,130,180,1);
 	position: relative;
 	text-align: center;
+	top: 1em;
 	padding-bottom: 2em;
+	padding-top: 2em;
+
 }
 /******************** 
 Rules to style header 
@@ -84,15 +88,17 @@ hr {
 Rules to style footer 
 **********************/
 footer {
+	width: 90%;
 	position: relative;
 	text-align: center;
 	margin-top: 2em;
+	margin-bottom: 2em;
 }
 /************************* 
 Rules to style index page 
 **************************/
 section#splash {
-	width: 100%;
+	width: 80%;
 	position: relative;
 	margin-top: 45%;
 	margin-bottom: 2em;
@@ -113,6 +119,10 @@ section#splash > p > a:hover {
 /***************************
 Rules to style dresses section 
 *****************************/
+section#dress-images, section#dress-details {
+	width: 100%;
+	max-width: 1450px;
+}
 section#dress-details > h2, section#dress-images h2 {
 	font-size: 1.5em;
 	margin: 3em 0 1em 0;
@@ -260,6 +270,14 @@ Media Queries to make site responsive
 		margin: 3%;
 		width: initial;
 		height: initial;
+	}
+}
+@media only screen and (max-width: 1108px) {
+	section#splash {
+		position: relative;
+		top: 75%;
+		margin-bottom: 2em;
+		text-align: center;
 	}
 }
 @media only screen and (max-width: 1040px) {
